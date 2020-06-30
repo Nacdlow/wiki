@@ -1,6 +1,6 @@
 # Summary
 
-- [Nacdlow Wiki](./index.md)
+- [Nacdlow Internal Wiki](./index.md)
 
 - [News](News.md)
 - [Members](Members.md)

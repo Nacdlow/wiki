@@ -1,5 +1,9 @@
 # The Official Internal Nacdlow Wiki
 
+> **Note:** This is an internal wiki we used between our six team members during
+> the development process of the project. We have redacted some parts to
+> protect the privacy of others.
+
 Welcome to the official wiki for Nacdlow. Please visit the news page to find
 out what's new, and feel free to post there.  
 

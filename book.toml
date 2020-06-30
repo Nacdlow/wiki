@@ -1,0 +1,6 @@
+[book]
+authors = ["Humaid AlQassimi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Nacdlow Wiki"

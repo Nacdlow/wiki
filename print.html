@@ -1,0 +1,1474 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Nacdlow Wiki</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Nacdlow Internal Wiki</a></li><li class="chapter-item expanded "><a href="News.html"><strong aria-hidden="true">2.</strong> News</a></li><li class="chapter-item expanded "><a href="Members.html"><strong aria-hidden="true">3.</strong> Members</a></li><li class="chapter-item expanded "><a href="Questions-and-Answers.html"><strong aria-hidden="true">4.</strong> Questions and Answers</a></li><li class="chapter-item expanded "><a href="Accounts.html"><strong aria-hidden="true">5.</strong> Accounts</a></li><li class="chapter-item expanded "><a href="Golang-Tutorial.html"><strong aria-hidden="true">6.</strong> Golang Tutorial</a></li><li class="chapter-item expanded "><a href="LaTeX-Docs.html"><strong aria-hidden="true">7.</strong> LaTeX Documentation</a></li><li class="chapter-item expanded "><a href="Technical/index.html"><strong aria-hidden="true">8.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Technical/Profiling.html"><strong aria-hidden="true">8.1.</strong> Profiling iglü server</a></li></ol></li><li class="chapter-item expanded "><a href="Guide/index.html"><strong aria-hidden="true">9.</strong> Style Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Guide/Main-Style-Guide.html"><strong aria-hidden="true">9.1.</strong> Main Style Guide</a></li><li class="chapter-item expanded "><a href="Guide/Design-Guide.html"><strong aria-hidden="true">9.2.</strong> Design Style Guide</a></li></ol></li><li class="chapter-item expanded "><a href="Brainstorming/index.html"><strong aria-hidden="true">10.</strong> Brainstorming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Brainstorming/Simulator.html"><strong aria-hidden="true">10.1.</strong> Simulator</a></li></ol></li><li class="chapter-item expanded "><a href="Meetings/Recordings.html"><strong aria-hidden="true">11.</strong> Meeting Recordings</a></li><li class="chapter-item expanded "><a href="Meetings/index.html"><strong aria-hidden="true">12.</strong> Meetings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Meetings/1.-27th-September.html"><strong aria-hidden="true">12.1.</strong> 27th of September</a></li><li class="chapter-item expanded "><a href="Meetings/2.-1st-October.html"><strong aria-hidden="true">12.2.</strong> 1st of October</a></li><li class="chapter-item expanded "><a href="Meetings/3.-8th-October.html"><strong aria-hidden="true">12.3.</strong> 8th of October</a></li><li class="chapter-item expanded "><a href="Meetings/4.-11th-October.html"><strong aria-hidden="true">12.4.</strong> 11th of October</a></li><li class="chapter-item expanded "><a href="Meetings/5.-16th-October.html"><strong aria-hidden="true">12.5.</strong> 16th of October</a></li><li class="chapter-item expanded "><a href="Meetings/6.-22th-October.html"><strong aria-hidden="true">12.6.</strong> 22nd of October</a></li><li class="chapter-item expanded "><a href="Meetings/7.-05th-November.html"><strong aria-hidden="true">12.7.</strong> 5th of November</a></li><li class="chapter-item expanded "><a href="Meetings/9.-15th-January.html"><strong aria-hidden="true">12.8.</strong> 15th of January</a></li><li class="chapter-item expanded "><a href="Meetings/17-02-20.html"><strong aria-hidden="true">12.9.</strong> 17th of February</a></li><li class="chapter-item expanded "><a href="Meetings/21-02-20.html"><strong aria-hidden="true">12.10.</strong> 21st of February</a></li><li class="chapter-item expanded "><a href="Meetings/03-03-20.html"><strong aria-hidden="true">12.11.</strong> 3rd of March</a></li></ol></li><li class="chapter-item expanded "><a href="Ideas/index.html"><strong aria-hidden="true">13.</strong> Ideas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Ideas/Alakbar's-Ideas.html"><strong aria-hidden="true">13.1.</strong> Alakbar's Ideas</a></li><li class="chapter-item expanded "><a href="Ideas/Amaan's-Ideas.html"><strong aria-hidden="true">13.2.</strong> Amaan's Ideas</a></li><li class="chapter-item expanded "><a href="Ideas/Humaid's-Ideas.html"><strong aria-hidden="true">13.3.</strong> Humaid's Ideas</a></li><li class="chapter-item expanded "><a href="Ideas/Numan's-Ideas.html"><strong aria-hidden="true">13.4.</strong> Numan's Ideas</a></li><li class="chapter-item expanded "><a href="Ideas/Ruaridh's-Ideas.html"><strong aria-hidden="true">13.5.</strong> Ruaridh's Ideas</a></li></ol></li><li class="chapter-item expanded "><a href="Research-and-Analysis/index.html"><strong aria-hidden="true">14.</strong> Research and Analysis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Research-and-Analysis/Existing-Solutions.html"><strong aria-hidden="true">14.1.</strong> Existing Solutions</a></li><li class="chapter-item expanded "><a href="Research-and-Analysis/Energy-Research.html"><strong aria-hidden="true">14.2.</strong> Energy Research</a></li></ol></li><li class="chapter-item expanded "><a href="Manager/index.html"><strong aria-hidden="true">15.</strong> Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Manager/Emails.html"><strong aria-hidden="true">15.1.</strong> Emails</a></li><li class="chapter-item expanded "><a href="Manager/Meetings.html"><strong aria-hidden="true">15.2.</strong> Meetings</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Nacdlow Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#the-official-internal-nacdlow-wiki" id="the-official-internal-nacdlow-wiki">The Official Internal Nacdlow Wiki</a></h1>
+<blockquote>
+<p><strong>Note:</strong> This is an internal wiki we used between our six team members during
+the development process of the project. We have redacted some parts to
+protect the privacy of others.</p>
+</blockquote>
+<p>Welcome to the official wiki for Nacdlow. Please visit the news page to find
+out what's new, and feel free to post there.</p>
+<p><strong>Our current goal:</strong> Implement core features and functionality of app.</p>
+<h2><a class="header" href="#important-external-links" id="important-external-links">Important External Links</a></h2>
+<ul>
+<li><a href="https://github.com/Nacdlow">GitLab group page</a></li>
+<li><a href="https://github.com/Nacdlow/wiki">Wiki repository (edit this wiki)</a></li>
+<li><a href="https://github.com/Nacdlow/wiki">Documentation repository</a>
+(<a href="https://github.com/Nacdlow/wiki">view generated PDFs</a>)</li>
+</ul>
+<h2><a class="header" href="#current-relevant-information" id="current-relevant-information">Current Relevant Information</a></h2>
+<p><strong>Studies:</strong><br />
+Please email Humaid when you finished surveying a subject using this link:
+<em>[redacted]</em></p>
+<h1><a class="header" href="#news" id="news">News</a></h1>
+<p><strong>The latest post is on top.</strong></p>
+<p>Feel free to add a post below, make sure you follow the format of the rest
+of the document.</p>
+<hr />
+<h4><a class="header" href="#entry-7" id="entry-7">Entry 7</a></h4>
+<p><strong>Post by:</strong> Humaid at 3:04pm, 1st November</p>
+<p>I have added a Golang tutorial section on the wiki. I am not expecting anyone
+to do this now, but it would be great if we could find some time so we can
+get together and do these exercises.</p>
+<p><a href="https://wiki.nacdlow.com/Golang-Tutorial.html">https://wiki.nacdlow.com/Golang-Tutorial.html</a></p>
+<hr />
+<h4><a class="header" href="#entry-6" id="entry-6">Entry 6</a></h4>
+<p><strong>Post by:</strong> Humaid at 1:55pm, 16th October</p>
+<p>This is a test post to demonstrate CI!</p>
+<hr />
+<h4><a class="header" href="#entry-5" id="entry-5">Entry 5</a></h4>
+<p><strong>Post by:</strong> Humaid at 8:03pm, 14th October</p>
+<p>The wiki is now hosted at <a href="https://wiki.nacdlow.com">wiki.nacdlow.com</a>. You
+have to be logged in to GitLab to view the site, as it is protected.</p>
+<p>Be mind that the wiki takes about 2-3 minutes to update after each commit. Also
+there is a dark mode available!</p>
+<hr />
+<h4><a class="header" href="#entry-4" id="entry-4">Entry 4</a></h4>
+<p><strong>Post by:</strong> Humaid at 5:53pm, 14th October</p>
+<p>We have bought a domain (nacdlow.com)! The domain cost was 6.56 pounds, so
+if you want to voluntarily pay your part you can pay 1 pound, but it is
+optional.</p>
+<p>Right now, we don't have a website up. But email aliases is set, and each
+member has an address which is aliased to their University email.</p>
+<ul>
+<li>alakbar@nacdlow.com</li>
+<li>amaan@nacdlow.com</li>
+<li>humaid@nacdlow.com</li>
+<li>mark@nacdlow.com</li>
+<li>numan@nacdlow.com</li>
+<li>ruaridh@nacdlow.com</li>
+</ul>
+<p>And there is a general email (contact@nacdlow.com) which will forward to all
+members.</p>
+<hr />
+<h4><a class="header" href="#entry-3" id="entry-3">Entry 3</a></h4>
+<p><strong>Post by:</strong> Humaid at 5:50pm, 13th October</p>
+<p>PDFs are now auto-compiled for the docs project, and it is no longer 
+included with the repository (gitignore'd). This simplifies the process and 
+reduces the size of the repository (no more binary blobs). You can view the 
+generated PDFs online by clicking the (browse artifacts) badge.</p>
+<p><a href="https://gitlab.com/group-nacdlow/docs">Go to docs repo</a></p>
+<hr />
+<h4><a class="header" href="#entry-2" id="entry-2">Entry 2</a></h4>
+<p><strong>Post by:</strong> Humaid at 4:54pm, 13th October</p>
+<p>The Go wiki is up, doesn't have much yet.
+It is generated by the mkdocs.sh script, which you can look at and improve 
+upon. If you want to run it you need godoc2markdown to be installed on your
+computer.</p>
+<p><a href="https://gitlab.com/group-nacdlow/nacdlow-server/wikis/home">https://gitlab.com/group-nacdlow/nacdlow-server/wikis/home</a></p>
+<hr />
+<h4><a class="header" href="#entry-1" id="entry-1">Entry 1</a></h4>
+<p><strong>Post by:</strong> Humaid at 4:09pm, 13th October</p>
+<p>The &quot;source&quot; repository is renamed to &quot;nacdlow-server&quot;.
+To update your remote URL, 'cd' into your local git repository for 'source'
+and run:</p>
+<pre><code class="language-sh">$ git remote set-url origin git@gitlab.com:group-nacdlow/nacdlow-server.git
+</code></pre>
+<hr />
+<h1><a class="header" href="#members-directory" id="members-directory">Members directory</a></h1>
+<p><strong>Note:</strong> The roles of the members are not a limiting factor of what
+the member could or could not do.</p>
+<p><em>This page used to list the members including their roles, emails, usernames,
+course, and what they are good at. This has been since redacted.</em></p>
+<h1><a class="header" href="#questions-and-answers" id="questions-and-answers">Questions and Answers</a></h1>
+<h2><a class="header" href="#git" id="git">Git</a></h2>
+<h3><a class="header" href="#how-do-i-commitpush-my-changes" id="how-do-i-commitpush-my-changes">How do I commit/push my changes?</a></h3>
+<p>First you have to stage the files you want to commit.</p>
+<pre><code class="language-sh">$ git add [files...]
+</code></pre>
+<p>Or you can stage all files.</p>
+<pre><code class="language-sh">$ git add .
+</code></pre>
+<p>You can double-check and see which files you staged.</p>
+<pre><code class="language-sh">$ git status
+</code></pre>
+<p>Now after everything is staged, you are ready to commit
+the changes.</p>
+<pre><code class="language-sh">$ git commit -m &quot;Your commit message here&quot;
+</code></pre>
+<p>Now that you have your changes committed, you can push
+it.</p>
+<pre><code class="language-sh">$ git push
+</code></pre>
+<p>Or sometimes you have to specify the remote/branch explicitly.</p>
+<pre><code class="language-sh">$ git push origin master
+</code></pre>
+<h3><a class="header" href="#how-do-i-pull-the-changes" id="how-do-i-pull-the-changes">How do I pull the changes?</a></h3>
+<p>Simply run:</p>
+<pre><code class="language-sh">$ git pull
+</code></pre>
+<p>Or to specify it more explicitly.</p>
+<pre><code class="language-sh">$ git pull origin master
+</code></pre>
+<h3><a class="header" href="#i-have-a-conflict-what-to-do" id="i-have-a-conflict-what-to-do">I have a conflict, what to do??</a></h3>
+<p>If the conflict cannot be automatically merged (non-fast-forward),
+you can go in the affected files and merge the changes yourself.
+Your changes and the origin's changes will be marked, you can remove
+the marking, and merge it manually.</p>
+<p>After manually merging the file, you can simply stage your changes, and
+commit (note that you don't need to provide a commit message).</p>
+<pre><code class="language-sh">$ git add .
+$ git commit
+# [An editor will appear, simply exit it]
+$ git push
+</code></pre>
+<h3><a class="header" href="#how-do-i-use-git-x" id="how-do-i-use-git-x">How do I use 'git X'</a></h3>
+<p>Simply run </p>
+<pre><code class="language-sh">$ git help X
+</code></pre>
+<p>Where X is the command you may want to understand. A <code>man</code> page
+will show up with all the different options, and examples.</p>
+<h3><a class="header" href="#i-tried-to-commit-and-nanovim-opened-what-to-do" id="i-tried-to-commit-and-nanovim-opened-what-to-do">I tried to commit, and nano/vim opened. What to do?!</a></h3>
+<p>You probably forgot to specify a commit message, simply type
+your commit message and exit. This also happens when you intentionally
+leave out the commit message when merging commits, or after an automatic
+merge. In that case you can exit by <kbd>:</kbd><kbd>q</kbd><kbd>Enter</kbd>
+in Vim, or <kbd>Ctrl</kbd>+<kbd>X</kbd> with nano. Otherwise;</p>
+<p>If it is vim, you'll have to enter <strong>INSERT</strong> mode before typing
+by pressing <kbd>i</kbd>, then you can type. After you are done,
+simply press <kbd>Esc</kbd> to go back to <strong>NORMAL</strong> mode, then
+to save and exit, type <kbd>:</kbd><kbd>w</kbd><kbd>q</kbd><kbd>Enter</kbd>.</p>
+<p>Otherwise, with nano simply type directly, and press <kbd>Ctrl</kbd>+<kbd>X</kbd>
+followed by a <kbd>Y</kbd>.</p>
+<h3><a class="header" href="#i-want-to-tag-my-current-commit-as-version-x-how-do-i-do-that" id="i-want-to-tag-my-current-commit-as-version-x-how-do-i-do-that">I want to tag my current commit as version X, how do I do that?</a></h3>
+<p>Let's say you want to tag the current commit as <code>v0.1</code>, we type</p>
+<pre><code class="language-sh">$ git tag v0.1
+</code></pre>
+<p>To push (or pull) the tag, you have to include <code>--tags</code> with your push command</p>
+<pre><code class="language-sh">$ git push --tags
+</code></pre>
+<p>And the tag will appear on GitLab.</p>
+<p>To delete a tag, simply do</p>
+<pre><code class="language-sh">$ git tag -d v0.1
+</code></pre>
+<h3><a class="header" href="#how-do-i-do-branching" id="how-do-i-do-branching">How do I do branching?</a></h3>
+<p>Check out the documentation on <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">Git Branching Basics</a>,
+which provides explanations with diagrams.</p>
+<h3><a class="header" href="#where-are-good-resources-on-git" id="where-are-good-resources-on-git">Where are good resources on Git?</a></h3>
+<p>Check out <a href="https://git-scm.com/docs">git-scm docs</a>, which goes in-depth in many aspects of the git tool.</p>
+<p>Also check out <a href="https://ohshitgit.com/">Oh Shit, Git!?!</a>, you'll need it when you screw up your repo :).</p>
+<h3><a class="header" href="#i-did-something-and-i-want-to-force-push-a-commit-but-it-isnt-allowing-me-what-to-do" id="i-did-something-and-i-want-to-force-push-a-commit-but-it-isnt-allowing-me-what-to-do">I did something, and I want to force push a commit, but it isn't allowing me. What to do?</a></h3>
+<p>GitLab doesn't allow force pushes by default (unlike GitHub), this prevents people from accidentally
+pushing a corrupted or old repository accidentally to origin.</p>
+<p>You will probably have to clone a fresh repository, and salvage the changes from the previous repository
+manually. This prevents us from corrupting the origin repository.</p>
+<h2><a class="header" href="#documentation" id="documentation">Documentation</a></h2>
+<h3><a class="header" href="#where-can-i-learn-more-about-latex" id="where-can-i-learn-more-about-latex">Where can I learn more about LaTeX?</a></h3>
+<p><a href="https://en.wikibooks.org/wiki/LaTeX">Wikibooks</a> has one of the best
+documentations on LaTeX. Another nice site is the
+<a href="https://learnxinyminutes.com/docs/latex/">LaTeX page on Learn X in Y Minutes</a>, which
+walks you through a document source.</p>
+<h3><a class="header" href="#what-other-things-should-i-learn" id="what-other-things-should-i-learn">What other things should I learn?</a></h3>
+<p>Diagrams are made with PlantUML, which is written in a very minimal format.
+You can check out <a href="http://plantuml.com/">examples on their main website</a>.</p>
+<h3><a class="header" href="#how-do-i-convert-a-tex-file-into-a-pdf" id="how-do-i-convert-a-tex-file-into-a-pdf">How do I convert a .tex file into a .pdf?</a></h3>
+<p>You need LaTeX installed on your computer, then you can run
+the command</p>
+<pre><code>$ pdflatex file.tex
+</code></pre>
+<p>where <code>file</code> is the name of the file. It will produce a <code>.pdf</code> file
+with the same name.</p>
+<h3><a class="header" href="#what-are-those-aux-and-toc-files" id="what-are-those-aux-and-toc-files">What are those .aux and .toc files?</a></h3>
+<p>Those files are automatically generated by LaTeX, you should ignore them.</p>
+<h3><a class="header" href="#how-do-i-create-a-png-file-from-a-plantuml-document" id="how-do-i-create-a-png-file-from-a-plantuml-document">How do I create a <code>.png</code> file from a PlantUML document?</a></h3>
+<p>You need to install PlantUML on your system, then simply run</p>
+<pre><code class="language-sh">$ plantuml diagram.txt -o diagram.png
+</code></pre>
+<p>Where <code>diagram.png</code> would be your output image file.</p>
+<h2><a class="header" href="#golang" id="golang">Golang</a></h2>
+<h3><a class="header" href="#how-do-i-build-a-binary-file" id="how-do-i-build-a-binary-file">How do I build a binary file?</a></h3>
+<p>Make sure you are in the root directory of the Go project, and run</p>
+<pre><code class="language-sh">$ go build
+</code></pre>
+<p>Or to directly run the project</p>
+<pre><code class="language-sh">$ go run main.go
+</code></pre>
+<h3><a class="header" href="#how-do-i-format-the-files" id="how-do-i-format-the-files">How do I format the files?</a></h3>
+<p>Simply run</p>
+<pre><code class="language-sh">$ go fmt ./...
+</code></pre>
+<p>Note the three dots, this recursively formats files in the project tree.</p>
+<p>To find issues, run the vet</p>
+<pre><code class="language-sh">$ go vet ./...
+</code></pre>
+<h3><a class="header" href="#how-to-run-the-unit-tests" id="how-to-run-the-unit-tests">How to run the unit tests?</a></h3>
+<p>To run all unit tests, simply run</p>
+<pre><code class="language-sh">$ go test ./...
+</code></pre>
+<h3><a class="header" href="#i-want-to-use-a-new-library-how-can-i-import-it" id="i-want-to-use-a-new-library-how-can-i-import-it">I want to use a new library, how can I import it?</a></h3>
+<p>You can just add it in the package imports section on the top of the
+Go file you want to use it in. With Go Modules enabled, this should
+be automatically downloaded when you try to use <code>go run</code> or <code>go build</code>.</p>
+<p>Otherwise, you can run</p>
+<pre><code class="language-sh">$ go get ./...
+</code></pre>
+<h3><a class="header" href="#where-can-i-learn-more-about-golang" id="where-can-i-learn-more-about-golang">Where can I learn more about Golang?</a></h3>
+<p>Going through the <a href="https://tour.golang.org">Golang Tour</a> is a great way to learn the language,
+you could also try to solve some problems on <a href="https://projecteuler.net/archives">Project Euler</a>,
+which would also strengthen your programming skills in general.</p>
+<p>Learn X in Y Minutes have their <a href="https://learnxinyminutes.com/docs/go/">dedicated page on Golang too</a>!</p>
+<h3><a class="header" href="#how-is-the-directory-structure-organised" id="how-is-the-directory-structure-organised">How is the directory structure organised.</a></h3>
+<p>Check out the <a href="Guide/Main-Style-Guide#go-project-structure">Go project structure</a> in the Main Style Guide.</p>
+<h3><a class="header" href="#where-are-the-documentations-for-the-libraries-used" id="where-are-the-documentations-for-the-libraries-used">Where are the documentations for the libraries used?</a></h3>
+<h4><a class="header" href="#xorm" id="xorm">XORM</a></h4>
+<p>XORM is the Object-Relational Mapping library we are using, this automatically hooks up with any
+database engine (PostgreSQL/SQLite/MySQL, or even MSSQL.. ew). This engine automatically generates
+the schema, and syncs the database. It also does the heavy-lifting for <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> queries.
+You can check the <a href="http://gobook.io/read/github.com/go-xorm/manual-en-US/">documentation on their website</a>.</p>
+<h4><a class="header" href="#macaron" id="macaron">Macaron</a></h4>
+<p>Macaron (or Go-Macaron) is a minimal web framework for Go, do note that this library relies on
+Go's built-in <code>net/http</code> library on many things, such as templating, and the framework is just
+a middleware between you and the <code>net/http</code> library. So it is important to know what is provided
+by the built-in library or Macaron, so you can find the appropriate documentation.</p>
+<p>Usually if it relates to these points, it is a Macaron thing:</p>
+<ul>
+<li>Routing (and parameters in URLs)</li>
+<li>Templating (built on top of Golang's templating, so it is mostly identical)</li>
+<li>Data binding (forms bound to structs)</li>
+<li>Sessions and cache</li>
+<li>Captchas and CSRF protection</li>
+</ul>
+<p>Check out <a href="https://go-macaron.com/docs">Macaron's wiki</a> as it contains really helpful information,
+and it will be used very frequently as a reference, just like XORM's docs.</p>
+<h4><a class="header" href="#urfaves-cli-library" id="urfaves-cli-library">Urfave's CLI library</a></h4>
+<p>To keep the command-line usage of the program neat and simple, we use <a href="https://github.com/urfave/cli">urfave's cli</a>
+library. This allows us to have multiple command-line commands, with flags and options, in a neat
+way. This is very simple, and usually just setup a couple of times when adding new commands in the
+beginning of the project's life-cycle.</p>
+<h4><a class="header" href="#burntsushis-toml" id="burntsushis-toml">BurntSushi's TOML</a></h4>
+<p>We use <a href="https://github.com/BurntSushi/toml">BurntSushi's TOML library</a> for handling TOML files.
+We use the TOML as the configuration file format, you can <a href="https://github.com/toml-lang/toml">check out TOML's language spec</a>.
+It is supposed to be better than YAML and INI (also, ew) format.</p>
+<h4><a class="header" href="#testify" id="testify">Testify</a></h4>
+<p>To help with writing unit tests, we use the <a href="https://github.com/toml-lang/toml">testify unit testing library</a> which
+simplifies the testing. Although Go provides a <code>testing</code> library, it does not have assertions. This library provides them,
+among other things, such as data mocking with its <code>mock</code> package, among other things.</p>
+<h4><a class="header" href="#other-libraries" id="other-libraries">Other libraries</a></h4>
+<p>If there are other libraries, you can check them. A good tool is the <code>go doc</code> command-line tool,
+also a better tool is the <a href="https://godoc.org/">GoDoc</a> website, you can simply enter any package
+and it will download it, and preview a web documentation.</p>
+<p>It is important to also be aware of <a href="https://golang.org/pkg/">Go's built-in library</a>, as it
+is really powerful.</p>
+<p>A nice website for discovering libraries is <a href="https://awesome-go.com/">Go Awesome</a>, it is also
+a source of inspiration.</p>
+<h4><a class="header" href="#learning-by-example" id="learning-by-example">Learning by example</a></h4>
+<p>A project called <a href="https://github.com/go-gitea/gitea">Gitea</a> is one of the main inspirations of
+this projects layout, and it uses the same libraries listed above. You can learn by checking out
+Gitea's source code, as it is done and structured similarly to our project.</p>
+<h2><a class="header" href="#general-programming" id="general-programming">General programming</a></h2>
+<h3><a class="header" href="#how-do-i-run-makefiles" id="how-do-i-run-makefiles">How do I run Makefiles?</a></h3>
+<p>To run Makefiles you need <a href="https://www.gnu.org/software/make/">GNU Make</a> installed on your system.
+Then you are able to use the <code>make</code> command, which will run the <code>Makefile</code> in the current directory.</p>
+<p>Makefiles may have multiple rules, such as <code>clean</code>, <code>build</code>, or <code>all</code> to run all rules (and produce a target). Consult the
+README file of the project, which would list the appropriate make commands for different scenarios.<br />
+Usually, you would run a command like</p>
+<pre><code class="language-sh">$ make all
+</code></pre>
+<p>Usually, Makefiles are simple and don't require modification once things are set.</p>
+<h3><a class="header" href="#what-editoride-should-i-use" id="what-editoride-should-i-use">What editor/IDE should I use?</a></h3>
+<p>Use whatever you like.</p>
+<p>If you are here for some recommendations, then:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> <em>(currently trendy, but has poor speed performance)</em></li>
+<li>[neo]vim and emacs <em>(has a learning curve, but pays off in the long run)</em></li>
+<li><a href="https://www.jetbrains.com/go/">Jetbrain's GoLand</a> <em>(made by same company who made IntelliJ)</em></li>
+<li><a href="https://www.geany.org/">Geany</a> <em>(a good lightweight alternative to VS Code and other Electron-based editors)</em></li>
+</ul>
+<h3><a class="header" href="#do-i-need-to-use-linux" id="do-i-need-to-use-linux">Do I need to use Linux?</a></h3>
+<p>Using Linux (or most Unix-based/like systems, this includes macOS) will help with development, as the
+tools can be run locally. Unlike with Windows, you may need to work-around with Windows Subsystem for Linux (WSL)
+or Cygwin, which might not work as expected like on a proper Unix system. Although it is <strong>not necessary</strong>, especially
+with organisational roles.</p>
+<p>How to get Linux?</p>
+<ul>
+<li>Use lab computers or <a href="https://www.macs.hw.ac.uk/cs/faq.html#Qnx">connect to them using X2Go</a> (may be slow), or via ssh (with <a href="https://www.chiark.greenend.org.uk/%7Esgtatham/putty/">PuTTY</a>).</li>
+<li>Setup a Virtual Machine with <a href="https://www.virtualbox.org/">VirtualBox</a>.</li>
+<li>Dual-boot your system.</li>
+<li>Nuke and pave your system with Linux.</li>
+</ul>
+<p><a href="https://ubuntu.com/desktop">Ubuntu</a> is a popular Linux distribution, which is easy to install and has
+a lot of online support.</p>
+<h3><a class="header" href="#which-programs-should-i-have-installed-on-my-system" id="which-programs-should-i-have-installed-on-my-system">Which programs should I have installed on my system?</a></h3>
+<p>You should have these packages installed on your system:</p>
+<ul>
+<li><a href="https://git-scm.com/downloads">git</a>: For version control.</li>
+<li><a href="https://www.latex-project.org/get/">LaTeX</a>: For document typesetting.</li>
+<li><a href="https://www.gnu.org/software/make/">GNU Make</a>: For build automation.</li>
+<li><a href="https://golang.org/">Go</a>: The programming language.</li>
+<li><a href="http://plantuml.com/">PlantUML</a>: For diagram generation.</li>
+</ul>
+<p>Other programs worth installing:</p>
+<ul>
+<li>A database server, such as PostgreSQL or MariaDB</li>
+<li>zathura: A minimal PDF viewer which reloads files automatically when updated.</li>
+<li>sxiv: A minimal image viewer which reloads images automatically when updated.</li>
+</ul>
+<h3><a class="header" href="#how-do-i-get-a-fancy-badge" id="how-do-i-get-a-fancy-badge">How do I get a fancy badge?</a></h3>
+<p>You can get one at <a href="https://shields.io/">https://shields.io/</a>, and add it in Settings&gt;General&gt;Badges on
+GitLab project or group.</p>
+<p>Do note that our repositories are private, so shields will not be able to view the
+statistics of our projects.</p>
+<h3><a class="header" href="#my-ci-build-failed-how-do-i-undo-it" id="my-ci-build-failed-how-do-i-undo-it">My CI build failed, how do I undo it?</a></h3>
+<p>There is no need to undo anything. Simply figure out why the CI build failed, it
+could be due to formatting or compilation issue. Make sure you run <code>make</code> to format
+and test the project before committing and pushing to GitLab.</p>
+<p>But it happens sometimes, and it is fine. This is the reason why we have CI.</p>
+<h1><a class="header" href="#accounts" id="accounts">Accounts</a></h1>
+<p>This page will contain all shared account credentials of the team.</p>
+<h2><a class="header" href="#stripe-demo-account" id="stripe-demo-account">Stripe (Demo) account</a></h2>
+<p>Username: <code>[redacted]@nacdlow.com</code><br />
+Password: <code>[redacted]</code></p>
+<h2><a class="header" href="#darksky-api-key" id="darksky-api-key">Darksky API Key</a></h2>
+<p>For Darksky, we use this API key: <code>[redacted]</code>. You will
+have to set this in your <code>config.toml</code>.</p>
+<p>This key has a limit of 1,000 requests per day.</p>
+<h2><a class="header" href="#teamgantt-account" id="teamgantt-account">TeamGantt account</a></h2>
+<h3><a class="header" href="#stage-1" id="stage-1">Stage 1</a></h3>
+<p>Username: <code>[redacted]</code><br />
+Password: <code>[redacted]</code></p>
+<p><a href="https://prod.teamgantt.com/gantt/schedule/?ids=REDACTED">Link to project
+page/login</a></p>
+<h3><a class="header" href="#stage-2" id="stage-2">Stage 2</a></h3>
+<p>Username: <code>[redacted]@nacdlow.com</code><br />
+Password: <code>[redacted]</code></p>
+<h3><a class="header" href="#stage-3" id="stage-3">Stage 3</a></h3>
+<p>Username : <code>[redacted]@nacdlow.com</code>
+Password: <code>[redacted]</code></p>
+<p><em>Due to TeamGantt restriction on free accounts, the rest of the team
+will be sharing this account.</em></p>
+<h1><a class="header" href="#golang-tutorial" id="golang-tutorial">Golang Tutorial</a></h1>
+<p>This is a tutorial for Go, you'll need to have Go installed.
+You can do this by using the package manager on your computer or by downloading
+it from <a href="https://golang.org">Go's website</a>.</p>
+<hr />
+<p>The only way to learn a programming language is to make a little project, no
+one ever learns a language just by reading a book or watching an hour long
+tutorial on YouTube.</p>
+<p>This is why this guide will not teach you how to write Go code, but will
+suggest a couple of exercies you could do.</p>
+<h2><a class="header" href="#exercise-1-project-euler" id="exercise-1-project-euler">Exercise 1: Project Euler</a></h2>
+<p><a href="https://projecteuler.net/">Project Euler</a> is a site which contains a series of
+mathematical and computational problems which you can solve by writing a
+program in any language. It can be fun and challenging.</p>
+<p>You have to register an account on the website so you can check your answers.</p>
+<p><strong>Goal:</strong> Write programs to solve the first 10 problems in Go.</p>
+<h2><a class="header" href="#exercise-2-jamie-is-alive" id="exercise-2-jamie-is-alive">Exercise 2: Jamie is alive</a></h2>
+<p>In this exercise, we will do Jamie's coursework but in Go instead of ML/Python.</p>
+<p>Since you have probably done them before, it should be simple especially when
+using the old code as reference.</p>
+<h3><a class="header" href="#1-complex-number-arithmetic" id="1-complex-number-arithmetic">1. Complex number arithmetic</a></h3>
+<p>Implement a <code>cadd</code> and <code>cmult</code> function in Go, you can use the <code>complex	</code> 
+type. These two functions should return type complex.</p>
+<p>For example:</p>
+<pre><code class="language-go">comp := complex(1, -2) // this is 1+2i
+fmt.Println(real(comp)) // this prints 1
+</code></pre>
+<h3><a class="header" href="#2-sequence-arithmetic" id="2-sequence-arithmetic">2. Sequence arithmetic</a></h3>
+<p>Consider an integer array. Implement recursive functions <code>seqadd</code> and <code>seqmult</code>
+which takes in <code>[]int</code> and returns <code>[]int</code>.</p>
+<p>For instance:</p>
+<pre><code class="language-go">seqadd([]int{1,2,3},[]int{-1,2,2})
+// returns []int{0,4,5}
+</code></pre>
+<p><em>Note: Do not write error handling code.</em></p>
+<h3><a class="header" href="#3-matrices" id="3-matrices">3. Matrices</a></h3>
+<p>Now the fun part! You should implement the following functions:</p>
+<ul>
+<li><code>isMatrix([][]int) bool</code>: Whether the 2d array of integers represents a
+matrix (when the length of each row is equal).</li>
+<li><code>matrixShape([][]int) (int, int)</code>: Should return two integers, the number of
+columns and number of rows (in that order).</li>
+<li><code>matrixAdd([][]int, [][]int) [][]int</code>: Matrix addition, which is a simply
+a pointwise addition.</li>
+<li><strong>A challenge</strong> <code>matrixMult([][]int, [][]int) [][]int</code>: Matrix
+multiplication.</li>
+</ul>
+<p><strong>Helpful links:</strong></p>
+<ul>
+<li>Matrix addition: <a href="https://www.mathsisfun.com/algebra/matrix-introduction.html">https://www.mathsisfun.com/algebra/matrix-introduction.html</a></li>
+<li>Matrix multiplication: <a href="https://www.mathsisfun.com/algebra/matrix-introduction.html">https://www.mathsisfun.com/algebra/matrix-introduction.html</a></li>
+</ul>
+<h1><a class="header" href="#latex-documentation" id="latex-documentation">LaTeX Documentation</a></h1>
+<p>This is the documentation for our LaTeX documents.</p>
+<p><a href="https://en.wikibooks.org/wiki/LaTeX">Full LaTeX documentation is available on Wikibooks</a></p>
+<p>This document will cover our custom LaTeX macros and style.</p>
+<h2><a class="header" href="#images" id="images">Images</a></h2>
+<p>There is a custom macro just for our documentation which allows us to easily
+add images to the files. Here is an example:</p>
+<pre><code class="language-latex">\mkimg{0.5}{test.png}{A test image}{test}
+</code></pre>
+<p>The order of arguments is as follows: width, filename, caption, figure
+reference. Note that the last argument will not show on the document, but the
+figure can then be referenced. For the example above, you can reference it
+like:</p>
+<pre><code class="language-latex">See figure \ref{fig:test} on the page \pageref{fig:test} for an example.
+</code></pre>
+<p>However, you do not have to reference the page.</p>
+<p>Technical section.</p>
+<h1><a class="header" href="#profiling-iglü-server" id="profiling-iglü-server">Profiling iglü server</a></h1>
+<p>iglü server has a profiler running by default, which you may check at
+<code>https://local.nacdlow.com[:8080]/debug/pprof/</code>.</p>
+<p>You may use <code>go tool pprof</code> to further analyse this, generating a graph of all
+function calls and how long they take. You will need <code>graphviz</code> package
+installed on your system to do this.</p>
+<h2><a class="header" href="#running-the-profiler" id="running-the-profiler">Running the profiler</a></h2>
+<ol>
+<li>Compile the server using <code>make</code> (don't use <code>go run</code>!).</li>
+<li>Run the server <code>./nacdlow-server run</code></li>
+<li>Do whatever you want, use the features you want to be profiled.</li>
+<li>Once you are done, run <code>go tool pprof nacdlow-server https://local.nacdlow.com:8080/debug/pprof/profile</code>.</li>
+<li>You'll get a pprof shell, type <code>web</code> to run the web interface (this is
+different than the previous!).</li>
+<li>View the profiler graph on the browser!</li>
+</ol>
+<p>Style Guide section.</p>
+<h1><a class="header" href="#main-style-guide" id="main-style-guide">Main Style Guide</a></h1>
+<p>The following is the main technologies which we are going to use.</p>
+<ul>
+<li>Language: <a href="https://golang.org">Go</a></li>
+<li>Database: <a href="https://xorm.io">XORM</a></li>
+<li>Version control: Git + GitLab</li>
+<li>Project management: GitLab Boards + Issues + Milestones</li>
+</ul>
+<p>The WhatsApp group shall be the media for messaging. Email
+may also be used, so email must be checked at least once
+a day.</p>
+<p>The GitLab group shall contain all of the following:</p>
+<ul>
+<li>Code source</li>
+<li>Project documentation</li>
+<li>Issue and milestone tracking</li>
+<li>Continuous integration (auto-builds)</li>
+<li>Wiki (such as this one)</li>
+<li>Reports</li>
+<li>Software development process management (scrum/kanban/etc)</li>
+</ul>
+<h2><a class="header" href="#software-development-process" id="software-development-process">Software Development Process</a></h2>
+<p>The project shall follow the Kanban methodology in the
+software development process.</p>
+<p>Tasks, ideas, and bugs shall all be listed in the issue tracker,
+and the issue board shall be used as a Kanban board.</p>
+<p>The following labels shall be created:</p>
+<ul>
+<li><code>Bug</code>: For bugs, and unexpected behaviour.</li>
+<li><code>Feature</code>: For features.</li>
+<li><code>Won't fix</code>: Things which will not be fixed or added.</li>
+<li><code>Enhancement</code>: Enhancements to the project.</li>
+</ul>
+<p>Other labels would be created for progress in the Kanban board:</p>
+<ul>
+<li><code>Must have</code>: To-do, with Must priority.</li>
+<li><code>Should have</code>: To-do with Should priority.</li>
+<li><code>In Progress</code>: Work in progress.</li>
+<li><code>Refinement &amp; Testing</code>: Function in testing and refinement phase.</li>
+</ul>
+<p>Complete issues are marked close.</p>
+<h2><a class="header" href="#decision-making" id="decision-making">Decision Making</a></h2>
+<p>If a decision couldn't be reached by consensus, each
+member shall have a turn to voice their opinion on the matter,
+then a vote shall be held by show of hands.</p>
+<p>Votes can only be held in meetings which are pre-scheduled, and
+members absent from the meeting aren't able to vote.</p>
+<p>The leader may have a second vote in the case of a tie.</p>
+<p>Changes to this style guide must be approved by a vote.</p>
+<h2><a class="header" href="#meetings" id="meetings">Meetings</a></h2>
+<p>Meetings shall be scheduled, at least once a week, to discuss the project,
+follow up on design choices, brainstorm, etc.</p>
+<p>Meetings shall be scheduled in a way which fits the schedule of all the
+members, but this shall not be used as an excuse to not hold a meeting.</p>
+<p>Meetings are recorded (consent must be taken each time), and must be released
+in a way accessible by the members. Recordings are recorded and uploaded by the designated
+recorder in the team, or by another team member if the designated recorder is not
+available during that meeting.</p>
+<p>Every meeting must be announced in advanced by at least a day, a wiki page
+can be created for that meeting, listing the points to cover, and what is
+covered, and any major decision or votes which was taken.</p>
+<h2><a class="header" href="#code-style-guide" id="code-style-guide">Code Style Guide</a></h2>
+<p>Code commited to the Git repositories shall be properly formatted,
+and shall pass tests in the next stages of development.</p>
+<p>The code shall be formatted according to the default specification
+of the language. If such does not exist, we shall adopt a popular
+code style guide for that language, and follow it strictly.</p>
+<p>Every code repository shall contain a <code>Makefile</code> which allows the
+compilation of the program, and may include testing and formatting.</p>
+<p>Every code repository shall contain a <code>README</code> file which contains
+the following sections:</p>
+<ul>
+<li>Description: A brief description of the code repository, with purpose
+and goal.</li>
+<li>Clone and Install: Instructions of cloning the repository and installing
+or executing the program.</li>
+<li>Usage: Documentation on the usage, configuration, command-line options or
+environment variables used by the program.</li>
+</ul>
+<p>A <code>CHANGELOG</code> file shall also be included, including all the tagged versions
+of the projects, including the changes from the previous version.</p>
+<h3><a class="header" href="#go-specific-style-guide" id="go-specific-style-guide">Go-specific Style Guide</a></h3>
+<p>All code shall be run through the following commands:</p>
+<ul>
+<li><code>go fmt ./...</code></li>
+<li><code>go vet ./...</code></li>
+<li><code>go test ./...</code></li>
+</ul>
+<p>And any issues arise from these commands shall be fixed before
+commited to the repository.</p>
+<p>Any public function or variable shall be documented. This is optional,
+but recommended for private functions and variables.</p>
+<h4><a class="header" href="#go-project-structure" id="go-project-structure">Go project structure</a></h4>
+<p><strong>Note: This is a new proposed section.</strong></p>
+<ul>
+<li><code>assets</code>: Any files used by external programs run by the program (i.e. configuration
+file for an external generator program).</li>
+<li><code>cmd</code>: Contains all the command-line commands.</li>
+<li><code>models</code>: Contains all struct models for database, data binding/validation forms, configuration files.</li>
+<li><code>modules</code>: Contains sub-packages for different modules of the project, such as...
+<ul>
+<li><code>settings</code>: Which contains program configuration.</li>
+<li><code>utils</code>: A &quot;catch-all&quot; module for everything and anything which doesn't fit anywhere else. :)</li>
+<li>Other package modules can be created here as needed.</li>
+</ul>
+</li>
+<li><code>public</code>: Any files here will be public facing for web, this is useful for hosting web assets such as
+JavaScript files, CSS, images, and fonts.
+<ul>
+<li><code>js</code>: For JavaScript files, external libraries must be versioned. The main JS file should be called <code>main.js</code>.</li>
+<li><code>css</code>: For CSS files, external libraries must be versioned. The main CSS file should be called <code>main.css</code>.</li>
+</ul>
+</li>
+<li><code>routes</code>: Where routes functions live, handling GET and POST requests, templates, validation, rendering pages, etc.</li>
+<li><code>templates</code>: Where all the HTML template files are stored.
+<ul>
+<li><code>base</code>: Where base templates live, such as <code>head</code> and <code>footer</code>.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#liaison-communications-log" id="liaison-communications-log">Liaison communications log</a></h2>
+<p>The project liaison shall keep a log of all the communications with
+the professors and the project manager. preferably on the wiki.</p>
+<h2><a class="header" href="#code-of-conduct" id="code-of-conduct">Code of Conduct</a></h2>
+<p>We shall follow <a href="http://lunduke.com/coc.html">The Lunduke Code of Conduct</a>, which
+simply states:</p>
+<blockquote>
+<p>Be Excellent to Each Other.</p>
+</blockquote>
+<p>And that's it! Simple enough, huh?</p>
+<h2><a class="header" href="#revisions-to-this-document" id="revisions-to-this-document">Revisions to this document</a></h2>
+<p>Any changes to this document must be approved by a vote before being enforceable.
+All changes to this document must be logged in the revision log.</p>
+<h2><a class="header" href="#revision-log" id="revision-log">Revision log</a></h2>
+<ul>
+<li>rev0 <em>(1st October 2019)</em>
+<ul>
+<li>Initial version</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#design-guide" id="design-guide">Design Guide</a></h1>
+<h2><a class="header" href="#nacdlow-company" id="nacdlow-company">Nacdlow Company</a></h2>
+<p><img src="Guide//uploads/443913c015aa22005e8a06395d6f9e76/Nacdlow_Text.png" alt="Nacdlow_Text" /></p>
+<p><em>Design standards are not set in stone. This page is a work in progress.</em></p>
+<h3><a class="header" href="#colours" id="colours">Colours</a></h3>
+<p>HEX: <code>#9ea0b8</code>
+HSV: <code>236, 14, 72</code>
+HSL: <code>236, 15.3%, 67%</code></p>
+<h3><a class="header" href="#typeface" id="typeface">Typeface</a></h3>
+<p>Montserrat Extra Bold Italic</p>
+<p>Link to zip file containing the TrueTypeFont files:
+<a href="Guide//uploads/7668b342701e68f098f345130d29ebfe/montserrat.zip">montserrat.zip</a></p>
+<p>Alternatively the font may be downloaded from <a href="https://fonts.google.com/specimen/Montserrat">fonts.google.com</a></p>
+<h2><a class="header" href="#iglü-app" id="iglü-app">Iglü App</a></h2>
+<p><img src="https://i.imgur.com/mO0afLM.png" alt="iglü_white" />
+<img src="https://i.imgur.com/fFpWDve.png" alt="iglü_black" /></p>
+<h3><a class="header" href="#colours-1" id="colours-1">Colours</a></h3>
+<p>Hex: <code>#3766FF</code></p>
+<h3><a class="header" href="#typeface-1" id="typeface-1">Typeface</a></h3>
+<p>The logo uses a custom version of Rockwell.</p>
+<h3><a class="header" href="#downloads" id="downloads">Downloads</a></h3>
+<p><strong><a href="Guide/Design-Guide.html#">Download files here</a></strong> <em>(link redacted)</em></p>
+<p>Brainstorming section.</p>
+<h2><a class="header" href="#simulator-logic" id="simulator-logic">Simulator logic</a></h2>
+<h3><a class="header" href="#time-simulation" id="time-simulation">Time simulation</a></h3>
+<p>The simulated environment will start at the current time, running normal time.
+In the simulator app, we will be able to speed up, change, or stop the time.
+This will reflect Darksky's real data. The simulated home will also have a
+location, which is used for getting the weather data.</p>
+<h3><a class="header" href="#weather-simulation" id="weather-simulation">Weather simulation</a></h3>
+<p>Weather will get pulled from Darksky, which will also return an hourly
+forecast of the weather. This can be used in both simulating the weather, and
+also for the smart home app and its suggestions.</p>
+<p>Darksky provides weather/natural disaster alerts, this data can be used. In the
+simulator page, you should be able to override the Darksky temperatures and
+values, and simulate alerts.</p>
+<h3><a class="header" href="#temperatures" id="temperatures">Temperatures</a></h3>
+<p>If a door or window is opened, the room's temperature will slowly start to
+match the outside temperature.</p>
+<p>Also, this applies to temperature control. When the temperature control is
+running, it will slowly adjust the room temperature to the set temperature.</p>
+<p>The temperature control is also able to &quot;fight&quot; with the outside weather if
+both windows/main door and temp control is running.</p>
+<p>If both temperature control (heating/cooling) and windows/doors are closed,
+then the room temperatures will very slowly change towards the outside
+temperature. Also opening the windows for a minute or two can significantly
+drop the temperature of the rooms.</p>
+<h3><a class="header" href="#power-generation" id="power-generation">Power generation</a></h3>
+<p>Depending on the cloud coverage (pulled from the weather data), the power
+generation will vary (under the max solar power generation capacity, in the
+simulated home).</p>
+<h3><a class="header" href="#power-consumption" id="power-consumption">Power consumption</a></h3>
+<p>Depending on the devices running on the home, the power consumption will
+change. There will also be a &quot;baseline&quot; power consumption, which will count in
+fridges and other appliances. This baseline power consumption will vary
+depending on the time of day, based on an average home power consumption graph.</p>
+<p><strong>Link to all meetings recordings:</strong><br />
+Link redacted</p>
+<p><strong>Link to manager meetings recordings:</strong><br />
+Link redacted</p>
+<p>Meetings section.</p>
+<h1><a class="header" href="#27th-september-meeting" id="27th-september-meeting">27th September Meeting</a></h1>
+<p><br/><br/></p>
+<h2><a class="header" href="#meeting" id="meeting">Meeting</a></h2>
+<ul>
+<li>Setting up Git</li>
+<li>Choice of languages</li>
+</ul>
+<p>No decisions has been made because only three people attended
+this meeting. We have discussed about choice of languages, @humaid
+suggested that we use <a href="https://golang.org">Go</a> as the implementation
+language and offered to help teach the language. There are worries
+if it may be difficult for others to catch up with, and that we might
+plan to use something like Python.</p>
+<p>We also had a tour of GitLab, showing the cool features with Issues,
+Milestones, Continuous Integration, Boards (for Kanban), and so on...</p>
+<p>@humaid agreed to give a tour of GitLab/Git, Go, and so on, in the next
+meeting.</p>
+<p><br/><br/></p>
+<h2><a class="header" href="#to-go-or-not-to-go" id="to-go-or-not-to-go">To Go or Not to Go</a></h2>
+<h4><a class="header" href="#care-for-golang" id="care-for-golang">Care For Golang:</a></h4>
+<ul>
+<li>Strongly typed: Dynamic typing can cause issues further on, like is the
+variable <code>id</code> an int or a string? Companies like Dropbox are trying to
+type-check 4 Million lines of Python.</li>
+<li>There is one way to format things. No Tabs v. Spaces flamewar, the <code>go fmt</code>
+tool automatically formats.</li>
+<li>The Objection-Relational Mapping library XORM is a good ORM implementation,
+unlike with Django, transactions are not as straight-forward.</li>
+<li>It is fast, compiled, garbage collected. So it is good from these aspects.
+And the syntax is similar to C.</li>
+</ul>
+<h4><a class="header" href="#case-against-golang" id="case-against-golang">Case Against Golang</a></h4>
+<ul>
+<li>We must spend time to learn yet another programming language.</li>
+<li>The syntax may take time to get used to.</li>
+<li>Some people might be more familiar with Python, and that is more important
+than the benefits we might have from Go.</li>
+</ul>
+<h1><a class="header" href="#1st-october-meeting" id="1st-october-meeting">1st October Meeting</a></h1>
+<p><em>The meeting will take place from 1PM to 4PM at
+GRG MRG.6 in the Grid building, which can be
+accessed from Inspire &amp; Collaborate 2 in the ground floor.</em></p>
+<p><em><strong>All members should attend.</strong> Important decisions will be
+taken during this meeting, and we will have an interactive
+session to learn and setup Git, which is a tool we will use
+throughout the project.</em></p>
+<hr />
+<p><br/><br/></p>
+<h2><a class="header" href="#agenda" id="agenda">Agenda</a></h2>
+<ul>
+<li>Setting up Git &amp; tour of GitLab (1+ hours)</li>
+<li>Short tour of setting up and using LaTeX</li>
+<li>Pick the team leader &amp; confirm the roles of members</li>
+<li>Hold debate around programming language (and decide on one)</li>
+<li>Hold debate around style guide, and hold to vote if ready</li>
+</ul>
+<h2><a class="header" href="#meeting-1" id="meeting-1">Meeting</a></h2>
+<h3><a class="header" href="#pre-meeting--1-2pm" id="pre-meeting--1-2pm">Pre-Meeting | 1-2pm</a></h3>
+<p>Members who were not present last meeting were given a crash course on Git, LateX, and Gitlab by Humaid. We explored using the many useful software development features of Gitlab such as &quot;Continuous Integration&quot; which allows for code to compiled and tested automatically upon push to the repository.</p>
+<p>Preliminary roles have been chosen. These are not final and will be malleable.</p>
+<p>Humaid gave his case for using Go (Golang). It was very effective.</p>
+<br/>
+<h3><a class="header" href="#ideas--21000" id="ideas--21000">Ideas | 2:10:00</a></h3>
+<p><strong>Controlling</strong></p>
+<ul>
+<li>Lightbulbs</li>
+<li>Blinds</li>
+<li>Heating</li>
+<li>Security System
+<ul>
+<li>Camera</li>
+<li>Motion Sensors</li>
+</ul>
+</li>
+<li>Eco mode</li>
+<li>Speakers (Echo Home/Google Assistant integration)</li>
+<li>Levels (Beginner, intermediate, expert)</li>
+</ul>
+<p><strong>Automated</strong></p>
+<ul>
+<li>Power Usage</li>
+<li>Solar panel power generation</li>
+<li>Battery level of battery</li>
+<li>Adjusting heating based on weather</li>
+<li>Turning lights on and off based on motion</li>
+<li>Learns your activity</li>
+</ul>
+<p><strong>Selling Points</strong></p>
+<ul>
+<li>Transparency</li>
+<li>Security</li>
+<li>Privacy</li>
+<li>Ease of use</li>
+<li>Prediction on usage</li>
+<li>Budgeting</li>
+<li>Scheduling electricity usgae based on electricity costs vs time</li>
+<li>Modules section</li>
+<li>Convert old homes</li>
+<li>Tips n' tricks</li>
+<li>Accessibility (for those with disabilities)</li>
+<li>Fire alarm per room</li>
+<li>Integrate country based emergency broadcast notifications</li>
+</ul>
+<br/>
+<h2><a class="header" href="#to-do" id="to-do">To-Do</a></h2>
+<ul>
+<li>Make mock-ups for what you think the app should look like
+<ul>
+<li>This doesn't have to be professional, just throw ideas around, or get pictures of other apps you think you look good</li>
+</ul>
+</li>
+<li>Note things that you notice in your home that could be improved etc.</li>
+<li>Research existing solutions</li>
+</ul>
+<h3><a class="header" href="#requirements-specification" id="requirements-specification">Requirements Specification</a></h3>
+<ul>
+<li>Purpose</li>
+<li>Scope</li>
+<li>Aims</li>
+<li>Objectives</li>
+<li>Functional &amp; Non-functional requirements</li>
+<li>UML :angry: </li>
+</ul>
+<h1><a class="header" href="#8th-october-meeting" id="8th-october-meeting">8th October Meeting</a></h1>
+<p><em><strong>All members should attend.</strong></em>
+<em>The meeting will be take place at GRGMRG.6 from 15:00 till 16:00.</em></p>
+<h2><a class="header" href="#requests" id="requests">Requests</a></h2>
+<ul>
+<li>Can a member of the group please bring an HDMI cable</li>
+</ul>
+<hr />
+<p><br/><br/></p>
+<h2><a class="header" href="#agenda-1" id="agenda-1">Agenda</a></h2>
+<ul>
+<li>Discuss solutions</li>
+<li>Discuss roles on requirement specification writing</li>
+<li>Arrange meeting with Manager</li>
+<li>Discuss App naming and other naming issues</li>
+</ul>
+<br/>
+<h2><a class="header" href="#meeting--1500" id="meeting--1500">Meeting | 15:00</a></h2>
+<h4><a class="header" href="#existing-solutions--0000" id="existing-solutions--0000">Existing Solutions | 00:00</a></h4>
+<ul>
+<li>Future Home</li>
+<li>Your Smart Home</li>
+<li>Cedia</li>
+<li>Bosch Smart Home</li>
+</ul>
+<h4><a class="header" href="#assigning-tasks--0800" id="assigning-tasks--0800">Assigning Tasks | 08:00</a></h4>
+<ol>
+<li>Requirements Specification
+<ul>
+<li>Humaid</li>
+</ul>
+</li>
+<li>Risk Analysis
+<ul>
+<li>Amaan</li>
+<li>Ruaridh</li>
+</ul>
+</li>
+<li>Project Decisions &amp; Plan
+<ul>
+<li>Alakbar</li>
+</ul>
+</li>
+<li>Project Costing
+<ul>
+<li>Mark</li>
+<li>Numan</li>
+</ul>
+</li>
+<li>Usability Evaluation of Mock-ups
+<ul>
+<li>LEAVING IT FOR NOW</li>
+</ul>
+</li>
+</ol>
+<br/>
+<h2><a class="header" href="#to-do--3912" id="to-do--3912">To-Do | 39:12</a></h2>
+<ul>
+<li>Familiarise yourself with the section in the Stage 1 report that has been assinged to you</li>
+</ul>
+<h1><a class="header" href="#11th-october-meeting" id="11th-october-meeting">11th October Meeting</a></h1>
+<p><strong>Meeting 1:30pm @ GRID</strong></p>
+<ul>
+<li>In this meeting we hope to discuss the current stage 1 roles further</li>
+<li>We will allocate more specific deadlines and start dates for each section</li>
+<li>Understanding Gantt Chart</li>
+</ul>
+<h2><a class="header" href="#gantt-chart-pdf" id="gantt-chart-pdf">Gantt Chart Pdf</a></h2>
+<p><strong>The Gantt Chart below is not final and will V2 will be created after this meeting</strong></p>
+<ul>
+<li><a href="Meetings/uploads/e653e679b5987375e860acebd51830f2/Nacdlow_Stage_1_.pdf">Nacdlow_Stage_1 Gantt Chart</a></li>
+</ul>
+<br>
+<br>
+<h2><a class="header" href="#meeting-2" id="meeting-2">Meeting</a></h2>
+<p>@RuaridhMollica explained the Gantt chart, demonstrating a couple of features of <a href="https://teamgantt.com">TeamGantt</a>.</p>
+<p>@humaid discussed the tooling set we are going to use for Go development, and how to make the most
+of the tools available, and integrating it with Continuous Integration. He also briefly discussed about GoDoc
+generation and Git Merging.</p>
+<p>We also discussed about buying a domain and how to setup and deploy websites. @humaid proposed:</p>
+<ul>
+<li>For buying domains <a href="https://namecheap.com">NameCheap</a> is a good seller.</li>
+<li>For hosting dynamic web apps <a href="https://heroku.com">Heroku</a> is a good free host.</li>
+<li>For static site hosting, <a href="Meetings/netlify.com">Netlify</a> is a good choice.</li>
+</ul>
+<h1><a class="header" href="#16th-october-meeting" id="16th-october-meeting">16th October Meeting</a></h1>
+<p>This meeting will take place at 1:30pm.</p>
+<h2><a class="header" href="#agenda-2" id="agenda-2">Agenda</a></h2>
+<ul>
+<li>Discuss what we will use for our website (Wordpress?)</li>
+<li>Discuss how we should keep the project at the end. So we have consensus on
+releasing the project open-source, and keeping the domain alive after the
+year (so we can link it on our portfolios/CV).</li>
+<li>Explain the structure of Go project.</li>
+</ul>
+<h2><a class="header" href="#meeting--1330" id="meeting--1330">Meeting | 13:30</a></h2>
+<h3><a class="header" href="#website-for-stage-2" id="website-for-stage-2">Website for Stage 2</a></h3>
+<p>Undecided for now. Deal with later. However try to minimise code use to save time</p>
+<h2><a class="header" href="#to-do-1" id="to-do-1">To-Do</a></h2>
+<p>Look at <a href="https://app.teamgantt.com/my-projects/">Gantt chart</a> for your task to complete by next meeting.</p>
+<p>Head to <a href="Meetings//Accounts.html">Accounts</a> for login details.</p>
+<h1><a class="header" href="#22nd-october-meeting" id="22nd-october-meeting">22nd October Meeting</a></h1>
+<p><em>This meeting will take place at 1:00pm at Library - Floor 2, Digital Study
+Studio 2 (10) - Edinburgh.</em></p>
+<hr />
+<p><br><br></p>
+<h2><a class="header" href="#agenda-3" id="agenda-3">Agenda</a></h2>
+<ul>
+<li>Sprint</li>
+</ul>
+<h2><a class="header" href="#meeting-3" id="meeting-3">Meeting</a></h2>
+<p>Each present member gave a brief summary of the work that they have completed and what they are planning to work on.</p>
+<p>It seems as though some members have exhausted their task list and it has been recommended that those who have nothing to do can take the initiative and fill tasks that have not been completed or listed.</p>
+<h1><a class="header" href="#5th-november-meeting" id="5th-november-meeting">5th November Meeting</a></h1>
+<p>This meeting will take place at 1:00pm.</p>
+<h2><a class="header" href="#agenda-4" id="agenda-4">Agenda</a></h2>
+<ul>
+<li>Check progress on stage 1</li>
+<li>Discuss usability test</li>
+</ul>
+<h2><a class="header" href="#meeting--1pm" id="meeting--1pm">Meeting | 1pm</a></h2>
+<p><em>Alakbar did not record the audio nor transcript for this meeting. The following notes are from memory only.</em>
+Everyone was asked how they are getting on. No issues so far.</p>
+<h3><a class="header" href="#usability-testing--time" id="usability-testing--time">Usability Testing | Time</a></h3>
+<p>We are unsure as to how exactly the usability testing will be conducted, however we know that the spec requires at least 6 people. We are planning on getting a small group of poeple to test a few designs of our app once we have the mockups </p>
+<h2><a class="header" href="#to-do-2" id="to-do-2">To-Do</a></h2>
+<ul>
+<li>If you find an uncompleted/unassigned section in the stage 1 reports, consider assigning yourself to it</li>
+<li>A basic mockup of the PWA must be created by next week or the week after</li>
+</ul>
+<h1><a class="header" href="#15th-january-meeting" id="15th-january-meeting">15th January Meeting</a></h1>
+<p><em>This meeting will take place at 14:30am at GRID Meeting Room 7 - Edinburgh.</em></p>
+<hr />
+<br>
+<br>
+<h2><a class="header" href="#meeting--1430" id="meeting--1430">Meeting | 14:30</a></h2>
+<h3><a class="header" href="#looking-over-feedback--1500" id="looking-over-feedback--1500">Looking Over Feedback | 15:00</a></h3>
+<p>Went over feedback of the stage 1 report as a group.</p>
+<h3><a class="header" href="#localhost--1530" id="localhost--1530">Localhost | 15:30</a></h3>
+<p>Humaid went over the structure of the webserver and how to set it up on ones own machine.</p>
+<h3><a class="header" href="#css-framework--1600" id="css-framework--1600">CSS framework | 16:00</a></h3>
+<p>Numan informed the team about MDB (Material-Design Bootstrap), the team as a colective agreed 
+to use this techonlogy moving forward. Humaid downloaded and setup the framework and is now ready for use.
+<br>
+We plan on starting front end development on 17/01/2020</p>
+<h3><a class="header" href="#er-diagram-and-db-implementation--1700" id="er-diagram-and-db-implementation--1700">ER Diagram and DB Implementation | 17:00</a></h3>
+<p>Worked on a basic form of the ER diagram, trying to figure out what we might need to include in the database.
+After a rough outline was drawn on a whiteboard we bagan implementing the schema allocating a table for each group 
+member to complete, all files created have been pushed successfully. </p>
+<br>
+<p><em>Nacldow have officially started the implementation phase.</em></p>
+<h1><a class="header" href="#17th-february-meeting" id="17th-february-meeting">17th February Meeting</a></h1>
+<p><em>This meeting will take place at 14:30 at Library Group Study Room 2</em></p>
+<hr />
+<br>
+<br>
+<h2><a class="header" href="#meeting--1430-1" id="meeting--1430-1">Meeting | 14:30</a></h2>
+<h2><a class="header" href="#to-do-stuff" id="to-do-stuff">To-Do Stuff</a></h2>
+<h3><a class="header" href="#adding-features-to-iglu" id="adding-features-to-iglu">Adding Features to iglu</a></h3>
+<ul>
+<li>Humidity simluation and display</li>
+<li>Gamification
+<ul>
+<li>Badges</li>
+<li>Friends/social media</li>
+<li>Compare to houses in your area</li>
+<li>Statistics (doors/windows/water usage)</li>
+</ul>
+</li>
+<li>Schedules</li>
+<li>Modes (holiday mode/going out)</li>
+<li>Contextual tips/actions (hey its hot outside, maybe open the windows)</li>
+<li>User profiles/privileges (Landlord privileges)</li>
+<li>Statistics page</li>
+<li>Room breakdown (how much power is it using)</li>
+<li>Piggy bank for saving </li>
+<li>Internet IoT for devices like door sensors</li>
+</ul>
+<h3><a class="header" href="#revisions-and-updoots" id="revisions-and-updoots">Revisions and Updoots</a></h3>
+<ul>
+<li>Think about rethinking the login process. Single login, multiple accounts (e.g. Netflix)</li>
+</ul>
+<h1><a class="header" href="#13th-february-meeting" id="13th-february-meeting">13th February Meeting</a></h1>
+<p><em>This meeting will take place at 14:30am at GRID.</em></p>
+<hr />
+<br>
+<br>
+<h2><a class="header" href="#meeting--1430-2" id="meeting--1430-2">Meeting | 14:30</a></h2>
+<h3><a class="header" href="#absolutely-critical--1445" id="absolutely-critical--1445">Absolutely Critical | 14:45</a></h3>
+<ul>
+<li>Hoody/T-shirt </li>
+<li>Nacdlow stickers MERCH</li>
+</ul>
+<h3><a class="header" href="#necessary-stuff" id="necessary-stuff">Necessary Stuff</a></h3>
+<ul>
+<li>Plugins</li>
+<li>Toggles</li>
+<li>Accessibility modes</li>
+<li>Accounts/permissions</li>
+<li>Dashboard (graphs)</li>
+<li>Rooms page cards with master switches</li>
+<li>Sliders not working</li>
+<li>GO THROUGH GITLAB AND GET RID OF ISSUES</li>
+</ul>
+<h3><a class="header" href="#ideas" id="ideas">Ideas</a></h3>
+<ul>
+<li>Moving devices from room to room</li>
+<li>Floor plan</li>
+<li>Inviting guests</li>
+<li>Alerts/notifications</li>
+<li>PWA (service workers)</li>
+<li>Dynamic tips</li>
+</ul>
+<h3><a class="header" href="#student-equipment-fund" id="student-equipment-fund">STUDENT EQUIPMENT FUND</a></h3>
+<ul>
+<li>Raspberry Pi</li>
+</ul>
+<h3><a class="header" href="#email-ron-about-questions" id="email-ron-about-questions">EMAIL RON ABOUT QUESTIONS</a></h3>
+<ul>
+<li>Lightning talk vs demonstration</li>
+<li>Did you like our vid :)</li>
+</ul>
+<h1><a class="header" href="#17th-february-meeting-1" id="17th-february-meeting-1">17th February Meeting</a></h1>
+<p><em>This meeting will take place at 11:00 at the GRID</em></p>
+<hr />
+<br>
+<br>
+<h2><a class="header" href="#meeting--1145" id="meeting--1145">Meeting | 11:45</a></h2>
+<h3><a class="header" href="#things-to-redesign" id="things-to-redesign">Things to Redesign</a></h3>
+<ul>
+<li>Add &quot;Cancel&quot; button when editing device/room names</li>
+<li>Make &quot;Save Changes&quot; button smaller</li>
+<li>Try to fix edit box cursor position (add padding?)</li>
+<li>Fix h1, h2, h3, etc. allocations to certain elements (especially on desktop)</li>
+<li>Cards on dashboard for favourites INTENSE redesign</li>
+<li>Font on device status card (specific rooms page)</li>
+<li>Add &quot;back to iglu&quot; button on Marketplace</li>
+<li>Toggle button on device not changing after another user toggles it</li>
+<li>Change off colours to grey as opposed to red</li>
+<li>Grey out toggles or sliders when device is off</li>
+<li>Back button on accounts page takes you to the confirm delete modal if you were on that page previously</li>
+<li>Change &quot;Switch Accounts&quot; to &quot;Switch Users&quot;</li>
+<li>Make/source 3 icons for the user to set as their logo</li>
+<li>ADD ALL OF THESE TO THE ISSUES ON IGLU SERVER DONT FORGET</li>
+</ul>
+<h3><a class="header" href="#things-we-want-working-by-the-expo" id="things-we-want-working-by-the-expo">Things We Want Working By The Expo</a></h3>
+<ul>
+<li>Netflix Login System</li>
+<li>Move devices to other rooms</li>
+<li>Overview page with floorplan (at least visually)</li>
+<li>Flesh out account permissions (restricted)</li>
+<li>Have a table of permissions for every role in app, if possible</li>
+<li>Add option to restrict a room to only admins when logged in as an admin (whilst creating the room and also an option in the drop down)</li>
+<li>T-Shirt (BLACK)</li>
+<li>Button Redesign</li>
+</ul>
+<p>Members ideas section.</p>
+<h1><a class="header" href="#alakbars-ideas" id="alakbars-ideas">Alakbar's Ideas</a></h1>
+<ul>
+<li>Hygrometer (per room?)</li>
+<li>Smart meter replacement (all in one solution)</li>
+<li>Battery life of house to encourage using less power</li>
+<li>Gamification (&quot;you used your shower for 20mins more than last week&quot;) [be careful]</li>
+</ul>
+<img src="Ideas//uploads/dab62e17bccfb9ca12ac802540caaa73/Battery_Life.png" width="400">
+<img src="Ideas//uploads/27445d184db441532db9c0aa756d7c17/Hygrometer.jpg" width="400">
+<img src="Ideas//uploads/aff8013e64e418edca9bc8f78c91b637/Dashboard.png" width="800">
+<img src="https://2672686a4cf38e8c2458-2712e00ea34e3076747650c92426bbb5.ssl.cf1.rackcdn.com/2018-05-20-05-54-31.jpeg" width="800">
+<h1><a class="header" href="#amaans-ideas" id="amaans-ideas">Amaan's Ideas</a></h1>
+<ul>
+<li><strong><a href="https://play.google.com/store/apps/details?id=com.samsung.android.oneconnect&amp;hl=en_GB">SmartThings</a> by Samsung</strong> 
+<ul>
+<li>User-programmable automation</li>
+<li>Easy Navigation</li>
+<li>Room Specific controll</li>
+<li>Simple Device Registration </li>
+<li>&quot;Modular&quot;</li>
+</ul>
+<hr>
+</li>
+<li><strong>Server Ideas</strong>
+<ul>
+<li>A small modern-looking box similar to WiFi routers</li>
+<li>Easy to set up &quot;plug and play&quot;</li>
+<li>No need for professional installation </li>
+<li>Include LCD screen to display helpful information</li>
+<li>Maybe incude same interface as mobile version of application</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#humaids-ideas" id="humaids-ideas">Humaid's Ideas</a></h1>
+<ul>
+<li>
+<p>Security ideas</p>
+<ul>
+<li>Two factor authentication</li>
+<li>Ability to list/audit sessions of users</li>
+<li>Log actions, with timestamps, etc</li>
+</ul>
+</li>
+<li>
+<p>Record the following stats</p>
+<ul>
+<li>How many times the house entrance door is opened</li>
+<li>How many times the fridge/freezer is opened</li>
+<li>How long the shower is used for</li>
+<li>Which windows are open, and for how long</li>
+<li>Which appliances, devices, and accessories are running in the house. This
+includes lights, TVs, and chargers.</li>
+</ul>
+</li>
+<li>
+<p>Module Marketplace</p>
+<ul>
+<li>This market place allows users to install modules/plugins to their system,
+just like browser extensions, but for the home.</li>
+<li>Maybe an open-source API, so people can hack it to make it their own.</li>
+<li>They can install &quot;premium&quot; modules, which they can install by contacting
+a contractor. For example they might want additional lighting, or a smart
+crock pot/rice cooker which works with the system.</li>
+<li>We can use <a href="https://golang.org/pkg/plugin/">Go's plugins package</a>.</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#numans-ideas" id="numans-ideas">Numan's Ideas</a></h1>
+<h3><a class="header" href="#general-ideas-for-the-application--" id="general-ideas-for-the-application--">General Ideas for the Application -</a></h3>
+<p><strong>Gamification:</strong></p>
+<ul>
+<li>Set target limits for energy consumption. Contextual tips and suggestions for achieving the set target.</li>
+<li>Gain points or an energy rating based on how low energy consumption has been. Achievements/badges can be unlocked.</li>
+<li>Compare your points/rating with friends (via social media etc) or energy consumption with neighbourhood (through national grid). </li>
+<li>Possible money incentive - energy bill savings in vouchers.</li>
+</ul>
+<p><strong>User Experience:</strong></p>
+<ul>
+<li>Select a home type, small home (apartments, flats, 1/2 bedroom etc), regular home (3/4 bed) and large (5+ bed). Can help to make the app better tailored to the user. Maybe even new or old home, limiting certain functions of the app.</li>
+<li>Different modes e.g. holiday mode. App puts lights on at night and turns of all other automations storing as much energy as possible.</li>
+<li>Home managers can set permissions for other user groups e.g. guest group for... guests.</li>
+</ul>
+<p><strong>UI &amp; Naming</strong> </p>
+<ul>
+<li>Home screen with latest energy stats and suggested controls based on time, temp, past behaviour. </li>
+<li>Live smart - possible app name.</li>
+<li>Samsung's Smartthings app has clean a UI.</li>
+<li>Smart meter inspired graphs - </li>
+</ul>
+<p><img src="Ideas//uploads/c1dc1a221202da3dfcffb93c56593f12/image.png" alt="image" /> <img src="Ideas//uploads/9212378a2b15a0f5e630fe5114f48d2d/image.png" alt="image" /></p>
+<h1><a class="header" href="#ruaridhs-ideas" id="ruaridhs-ideas">Ruaridh's Ideas</a></h1>
+<p>In this part of the wiki i will include any ideas that come to mind. This is merely a place to put things, no idea here is guaranteed to make it to the final implementation.</p>
+<h2><a class="header" href="#ideas-for-features" id="ideas-for-features">Ideas for Features:</a></h2>
+<ul>
+<li>In sunny weather the application can ask the user if they wish to enter &quot;Sun Mode&quot;: a mode that turns off all lights and opens blinds in order to save energy and maximise solar panels</li>
+<li>Identifies where in the home heat and power is being lost to things such as: draughts from doors and windows, appliences using more power than needed, lights being left on etc..</li>
+<li>A priority mode where the user can select what devices to send the most power to. e.g. in eco mode perhaps the user may not want to waste power on speakers and focus it on heating etc..</li>
+<li>A share feature that allows the user to send milestones about energy saving/consumtption to friends: free advertising :stuck_out_tongue_winking_eye: </li>
+<li>Room specific power usage values with the option to go into more detail of each room e.g. specific device power usage</li>
+<li>As you become more prevelent in energy saving your bills will decrease. Hence, money saved on bills over time can get accummulated into a &quot;pot&quot; that saves/ keeps track of how much money has been saved. include graphs etc..</li>
+</ul>
+<h2><a class="header" href="#ideas-for-functionality" id="ideas-for-functionality">Ideas for Functionality:</a></h2>
+<p><strong>Ideas will go here</strong></p>
+<h2><a class="header" href="#ideas-for-ui-and-design" id="ideas-for-ui-and-design">Ideas for UI and Design:</a></h2>
+<p><strong>Colour study:</strong></p>
+<ul>
+<li>I looked at colours that would pehaps emphasise things that the company and app represent e.g. enegry, eco, tech, future..
+<img src="Ideas//uploads/55f3076223184f5d2ae1466917f32139/Colour_Study.PNG" alt="Colour_Study" /></li>
+</ul>
+<p>Research and Analysis section.</p>
+<h1><a class="header" href="#research-into-existing-solutions" id="research-into-existing-solutions">Research into existing solutions</a></h1>
+<ul>
+<li>Areas to start research are the Wikipedia pages for
+<a href="https://en.wikipedia.org/wiki/Smart_home_technology">Smart home technology</a>
+and <a href="https://en.wikipedia.org/wiki/Home_automation">Home automation</a>.</li>
+</ul>
+<h2><a class="header" href="#great-document-detailing-a-human-first-ideology-in-a-future-home" id="great-document-detailing-a-human-first-ideology-in-a-future-home">Great Document Detailing a Human First Ideology in a Future Home:</a></h2>
+<p><a href="https://www.accenture.com/_acnmedia/pdf-98/accenture-putting-human-first-future-home.pdf">Putting the Human First in the Future Home</a></p>
+<ul>
+<li>Highlights pros and cons</li>
+<li>Integration into society</li>
+<li>Provides some solid statistics</li>
+</ul>
+<h2><a class="header" href="#smartthings-by-samsung" id="smartthings-by-samsung">SmartThings by Samsung</a></h2>
+<p><a href="https://play.google.com/store/apps/details?id=com.samsung.android.oneconnect&amp;hl=en_GB">SmartThings</a>
+<strong>Features:</strong></p>
+<ul>
+<li>Good example of a modern clean and elegant solution while still being powerful. </li>
+</ul>
+<h2><a class="header" href="#bosch-smart-controller" id="bosch-smart-controller">Bosch Smart Controller</a></h2>
+<p><a href="https://www.bosch-smarthome.com/uk/en/shop?url=products/smart-system-solutions/smart-home-controller">Bosch SmartHome Controller</a>
+<strong>Features:</strong></p>
+<ul>
+<li>Heating control</li>
+<li>Radio and Music Control</li>
+<li>Lighting</li>
+<li>Windows</li>
+<li>Alarm System</li>
+<li>Presence Simulation</li>
+<li>Motion Detectio</li>
+<li>&quot;Future Proof&quot;(Auto Updates)</li>
+</ul>
+<h2><a class="header" href="#yoursmarthome" id="yoursmarthome">YourSmartHome</a></h2>
+<p><a href="http://www.yoursmarthome.co.uk/">YourSmartHome</a>
+<strong>Features:</strong></p>
+<ul>
+<li>Great app based implementation on phone, tablet and smart watch</li>
+<li>Lighting Levels can be set to dim and brighten with the rise and set of the sun</li>
+<li>Emphasises that the automation of things can be manually overridden(full control)</li>
+<li>Has solar and wind power integration</li>
+</ul>
+<h2><a class="header" href="#futurehome---smart-home" id="futurehome---smart-home">Futurehome - Smart Home</a></h2>
+<p><a href="https://futurehome.no/en/">Futurehome</a>
+<strong>Features:</strong></p>
+<ul>
+<li>Product style can be picked e.g. cool, jazzy or glamour look</li>
+<li>Simplistic and clean design with nice elegant cartoons demonstrating features</li>
+<li>Emphasises safety and that a smart home is &quot;just your home only smarter&quot;</li>
+<li>Mode settings and shortcuts </li>
+<li>Alarms</li>
+<li>Power and usage statistics</li>
+<li>Multiple users</li>
+<li>Event triggers</li>
+<li>Timelines</li>
+<li>Auto-Update
+<em>Limitations:</em></li>
+<li>Does not support 3rd party devices : expensive :moneybag: </li>
+</ul>
+<h2><a class="header" href="#eon-home" id="eon-home">E.ON Home</a></h2>
+<p><a href="https://www.eon.com/en/private-customers/home-energy-management.html">E.ON Home Energy Management</a>
+<strong>Features:</strong>
+<em>Most features are similar to that of the prior solutions with addition of:</em></p>
+<ul>
+<li>Controlling energy generation and consumption</li>
+<li>Highly flexible with full support for 3rd party applications and devices</li>
+<li>Makes great use of weather to maximise energy</li>
+<li>Provides full energy plans along with the future home if that is desired</li>
+</ul>
+<h2><a class="header" href="#what-unit-of-energy-should-we-use" id="what-unit-of-energy-should-we-use">What unit of energy should we use?</a></h2>
+<p>To measure &quot;energy generated&quot; from the solar panels we should use kW, this unit 
+will change dependent on how much sunshine comes into contact with the solar 
+panels.</p>
+<p>To measure &quot;energy stored&quot; we should use kWh, this unit will change dependent
+on how much energy is generated and also how many/what devices are being used.</p>
+<p><a href="https://www.renewableenergyhub.co.uk/main/solar-panels/how-much-electricity-does-a-solar-panel-produce/">source1</a>
+<a href="https://news.energysage.com/what-is-the-power-output-of-a-solar-panel/">source2</a></p>
+<h2><a class="header" href="#how-much-electricity-does-lights-in-a-living-room-use" id="how-much-electricity-does-lights-in-a-living-room-use">How much electricity does lights in a living room use?</a></h2>
+<p>Assuming we are only using LED bulbs we will use 10 watts as a standard power 
+rating of each bulb for the calculations. this means for every hour a bulb is on it
+will consume 0.01 kWH of energy stored from the solor panels.</p>
+<p>With the above statement and assuming a living room has 4 lights and are on for 
+8 hours on a typical day we can do the following calculation:</p>
+<p>=&gt; 4 lights * 8 hours * 10w = <strong>320Wh per day</strong> =&gt; 320 Wh / 1000 = <strong>0.32kWh per day.</strong></p>
+<h2><a class="header" href="#how-much-electricity-does-heating-and-cooling-use" id="how-much-electricity-does-heating-and-cooling-use">How much electricity does heating and cooling use?</a></h2>
+<p>A central air conditioner/heat pump on avarage uses <a href="https://oasisenergy.com/appliance-electricity-usage/">15,000W per hour</a>
+or <strong>15kW per hour</strong>.</p>
+<h2><a class="header" href="#how-much-electricity-does-an-energy-efficent-house-use" id="how-much-electricity-does-an-energy-efficent-house-use">How much electricity does an energy efficent house use?</a></h2>
+<p>An avarage home in the UK uses between  <a href="https://www.ovoenergy.com/guides/energy-guides/how-much-electricity-does-a-home-use.html">2700kWh - 4200kWh</a> per year dependent on 
+the size of the house. We will assume our home on avarage will consume <strong>3000kWh
+per year</strong>.</p>
+<h2><a class="header" href="#how-much-electricity-does-an-energy-efficent-house-use-when-all-lights-and-heatingcooling-off" id="how-much-electricity-does-an-energy-efficent-house-use-when-all-lights-and-heatingcooling-off">How much electricity does an energy efficent house use when all lights and heating/cooling off?</a></h2>
+<p>Manager's section.</p>
+<h1><a class="header" href="#manager-emails" id="manager-emails">Manager Emails</a></h1>
+<p><em><strong>All communications with the manager via email should be included in this page.</strong></em>
+<br/></p>
+<p><strong>This section has been redacted to protect the privacy of the individuals
+involved.</strong></p>
+<h1><a class="header" href="#manager-meetings" id="manager-meetings">Manager Meetings</a></h1>
+<p><em><strong>All communications with professors and manager should be included in this page.</strong></em></p>
+<p>Manager meetings will be held every 2 weeks.</p>
+<br/>
+<h2><a class="header" href="#meeting-with-manager--1300---081019" id="meeting-with-manager--1300---081019">Meeting With Manager | 13:00 - 08/10/19=</a></h2>
+<p><strong>[Link redacted]</strong></p>
+<ul>
+<li>Natural Language Processing is the managers field.</li>
+<li>Encouraging using actual hardware (Raspberry Pi).</li>
+<li>Think about retrofitting older homes.</li>
+<li>Others in the group may not know about some technologies, so keep in mind about not creating too many things to learn.</li>
+<li>Don't wait till semester 2 to start writing code.</li>
+<li>Do not underestimate the backend.</li>
+<li>Biggest issue with Amazon Alexa is human error (&quot;switch off the light... no the other one&quot;). Recommend to leave as a want to have.</li>
+<li>Market research is important, even though it is down the line. Focus groups, surveys, etc.</li>
+<li>Think about data. It is very important.</li>
+</ul>
+<p>Monday/Wednesday/Thursday are his free days.</p>
+<br/>
+<h2><a class="header" href="#meeting-with-manager--1315---151119" id="meeting-with-manager--1315---151119">Meeting With Manager | 13:15 - 15/11/19</a></h2>
+<p><strong>[Link redacted]</strong></p>
+<h3><a class="header" href="#usability" id="usability">Usability</a></h3>
+<ul>
+<li>Give people task and ask them how they would approach it in the group</li>
+<li>Different age range</li>
+<li>Each member of the group finds at least 1 person to run the test with, preferably 2</li>
+</ul>
+<h3><a class="header" href="#report" id="report">Report</a></h3>
+<ul>
+<li>Send it to our manager at least 1 week before the deadline so he has time to check it thoroughly</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

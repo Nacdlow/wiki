@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Main Style Guide - Nacdlow Wiki</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Nacdlow Internal Wiki</a></li><li class="chapter-item expanded "><a href="../News.html"><strong aria-hidden="true">2.</strong> News</a></li><li class="chapter-item expanded "><a href="../Members.html"><strong aria-hidden="true">3.</strong> Members</a></li><li class="chapter-item expanded "><a href="../Questions-and-Answers.html"><strong aria-hidden="true">4.</strong> Questions and Answers</a></li><li class="chapter-item expanded "><a href="../Accounts.html"><strong aria-hidden="true">5.</strong> Accounts</a></li><li class="chapter-item expanded "><a href="../Golang-Tutorial.html"><strong aria-hidden="true">6.</strong> Golang Tutorial</a></li><li class="chapter-item expanded "><a href="../LaTeX-Docs.html"><strong aria-hidden="true">7.</strong> LaTeX Documentation</a></li><li class="chapter-item expanded "><a href="../Technical/index.html"><strong aria-hidden="true">8.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Technical/Profiling.html"><strong aria-hidden="true">8.1.</strong> Profiling iglü server</a></li></ol></li><li class="chapter-item expanded "><a href="../Guide/index.html"><strong aria-hidden="true">9.</strong> Style Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Guide/Main-Style-Guide.html" class="active"><strong aria-hidden="true">9.1.</strong> Main Style Guide</a></li><li class="chapter-item expanded "><a href="../Guide/Design-Guide.html"><strong aria-hidden="true">9.2.</strong> Design Style Guide</a></li></ol></li><li class="chapter-item expanded "><a href="../Brainstorming/index.html"><strong aria-hidden="true">10.</strong> Brainstorming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Brainstorming/Simulator.html"><strong aria-hidden="true">10.1.</strong> Simulator</a></li></ol></li><li class="chapter-item expanded "><a href="../Meetings/Recordings.html"><strong aria-hidden="true">11.</strong> Meeting Recordings</a></li><li class="chapter-item expanded "><a href="../Meetings/index.html"><strong aria-hidden="true">12.</strong> Meetings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Meetings/1.-27th-September.html"><strong aria-hidden="true">12.1.</strong> 27th of September</a></li><li class="chapter-item expanded "><a href="../Meetings/2.-1st-October.html"><strong aria-hidden="true">12.2.</strong> 1st of October</a></li><li class="chapter-item expanded "><a href="../Meetings/3.-8th-October.html"><strong aria-hidden="true">12.3.</strong> 8th of October</a></li><li class="chapter-item expanded "><a href="../Meetings/4.-11th-October.html"><strong aria-hidden="true">12.4.</strong> 11th of October</a></li><li class="chapter-item expanded "><a href="../Meetings/5.-16th-October.html"><strong aria-hidden="true">12.5.</strong> 16th of October</a></li><li class="chapter-item expanded "><a href="../Meetings/6.-22th-October.html"><strong aria-hidden="true">12.6.</strong> 22nd of October</a></li><li class="chapter-item expanded "><a href="../Meetings/7.-05th-November.html"><strong aria-hidden="true">12.7.</strong> 5th of November</a></li><li class="chapter-item expanded "><a href="../Meetings/9.-15th-January.html"><strong aria-hidden="true">12.8.</strong> 15th of January</a></li><li class="chapter-item expanded "><a href="../Meetings/17-02-20.html"><strong aria-hidden="true">12.9.</strong> 17th of February</a></li><li class="chapter-item expanded "><a href="../Meetings/21-02-20.html"><strong aria-hidden="true">12.10.</strong> 21st of February</a></li><li class="chapter-item expanded "><a href="../Meetings/03-03-20.html"><strong aria-hidden="true">12.11.</strong> 3rd of March</a></li></ol></li><li class="chapter-item expanded "><a href="../Ideas/index.html"><strong aria-hidden="true">13.</strong> Ideas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Ideas/Alakbar's-Ideas.html"><strong aria-hidden="true">13.1.</strong> Alakbar's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Amaan's-Ideas.html"><strong aria-hidden="true">13.2.</strong> Amaan's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Humaid's-Ideas.html"><strong aria-hidden="true">13.3.</strong> Humaid's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Numan's-Ideas.html"><strong aria-hidden="true">13.4.</strong> Numan's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Ruaridh's-Ideas.html"><strong aria-hidden="true">13.5.</strong> Ruaridh's Ideas</a></li></ol></li><li class="chapter-item expanded "><a href="../Research-and-Analysis/index.html"><strong aria-hidden="true">14.</strong> Research and Analysis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Research-and-Analysis/Existing-Solutions.html"><strong aria-hidden="true">14.1.</strong> Existing Solutions</a></li><li class="chapter-item expanded "><a href="../Research-and-Analysis/Energy-Research.html"><strong aria-hidden="true">14.2.</strong> Energy Research</a></li></ol></li><li class="chapter-item expanded "><a href="../Manager/index.html"><strong aria-hidden="true">15.</strong> Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Manager/Emails.html"><strong aria-hidden="true">15.1.</strong> Emails</a></li><li class="chapter-item expanded "><a href="../Manager/Meetings.html"><strong aria-hidden="true">15.2.</strong> Meetings</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Nacdlow Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#main-style-guide" id="main-style-guide">Main Style Guide</a></h1>
+<p>The following is the main technologies which we are going to use.</p>
+<ul>
+<li>Language: <a href="https://golang.org">Go</a></li>
+<li>Database: <a href="https://xorm.io">XORM</a></li>
+<li>Version control: Git + GitLab</li>
+<li>Project management: GitLab Boards + Issues + Milestones</li>
+</ul>
+<p>The WhatsApp group shall be the media for messaging. Email
+may also be used, so email must be checked at least once
+a day.</p>
+<p>The GitLab group shall contain all of the following:</p>
+<ul>
+<li>Code source</li>
+<li>Project documentation</li>
+<li>Issue and milestone tracking</li>
+<li>Continuous integration (auto-builds)</li>
+<li>Wiki (such as this one)</li>
+<li>Reports</li>
+<li>Software development process management (scrum/kanban/etc)</li>
+</ul>
+<h2><a class="header" href="#software-development-process" id="software-development-process">Software Development Process</a></h2>
+<p>The project shall follow the Kanban methodology in the
+software development process.</p>
+<p>Tasks, ideas, and bugs shall all be listed in the issue tracker,
+and the issue board shall be used as a Kanban board.</p>
+<p>The following labels shall be created:</p>
+<ul>
+<li><code>Bug</code>: For bugs, and unexpected behaviour.</li>
+<li><code>Feature</code>: For features.</li>
+<li><code>Won't fix</code>: Things which will not be fixed or added.</li>
+<li><code>Enhancement</code>: Enhancements to the project.</li>
+</ul>
+<p>Other labels would be created for progress in the Kanban board:</p>
+<ul>
+<li><code>Must have</code>: To-do, with Must priority.</li>
+<li><code>Should have</code>: To-do with Should priority.</li>
+<li><code>In Progress</code>: Work in progress.</li>
+<li><code>Refinement &amp; Testing</code>: Function in testing and refinement phase.</li>
+</ul>
+<p>Complete issues are marked close.</p>
+<h2><a class="header" href="#decision-making" id="decision-making">Decision Making</a></h2>
+<p>If a decision couldn't be reached by consensus, each
+member shall have a turn to voice their opinion on the matter,
+then a vote shall be held by show of hands.</p>
+<p>Votes can only be held in meetings which are pre-scheduled, and
+members absent from the meeting aren't able to vote.</p>
+<p>The leader may have a second vote in the case of a tie.</p>
+<p>Changes to this style guide must be approved by a vote.</p>
+<h2><a class="header" href="#meetings" id="meetings">Meetings</a></h2>
+<p>Meetings shall be scheduled, at least once a week, to discuss the project,
+follow up on design choices, brainstorm, etc.</p>
+<p>Meetings shall be scheduled in a way which fits the schedule of all the
+members, but this shall not be used as an excuse to not hold a meeting.</p>
+<p>Meetings are recorded (consent must be taken each time), and must be released
+in a way accessible by the members. Recordings are recorded and uploaded by the designated
+recorder in the team, or by another team member if the designated recorder is not
+available during that meeting.</p>
+<p>Every meeting must be announced in advanced by at least a day, a wiki page
+can be created for that meeting, listing the points to cover, and what is
+covered, and any major decision or votes which was taken.</p>
+<h2><a class="header" href="#code-style-guide" id="code-style-guide">Code Style Guide</a></h2>
+<p>Code commited to the Git repositories shall be properly formatted,
+and shall pass tests in the next stages of development.</p>
+<p>The code shall be formatted according to the default specification
+of the language. If such does not exist, we shall adopt a popular
+code style guide for that language, and follow it strictly.</p>
+<p>Every code repository shall contain a <code>Makefile</code> which allows the
+compilation of the program, and may include testing and formatting.</p>
+<p>Every code repository shall contain a <code>README</code> file which contains
+the following sections:</p>
+<ul>
+<li>Description: A brief description of the code repository, with purpose
+and goal.</li>
+<li>Clone and Install: Instructions of cloning the repository and installing
+or executing the program.</li>
+<li>Usage: Documentation on the usage, configuration, command-line options or
+environment variables used by the program.</li>
+</ul>
+<p>A <code>CHANGELOG</code> file shall also be included, including all the tagged versions
+of the projects, including the changes from the previous version.</p>
+<h3><a class="header" href="#go-specific-style-guide" id="go-specific-style-guide">Go-specific Style Guide</a></h3>
+<p>All code shall be run through the following commands:</p>
+<ul>
+<li><code>go fmt ./...</code></li>
+<li><code>go vet ./...</code></li>
+<li><code>go test ./...</code></li>
+</ul>
+<p>And any issues arise from these commands shall be fixed before
+commited to the repository.</p>
+<p>Any public function or variable shall be documented. This is optional,
+but recommended for private functions and variables.</p>
+<h4><a class="header" href="#go-project-structure" id="go-project-structure">Go project structure</a></h4>
+<p><strong>Note: This is a new proposed section.</strong></p>
+<ul>
+<li><code>assets</code>: Any files used by external programs run by the program (i.e. configuration
+file for an external generator program).</li>
+<li><code>cmd</code>: Contains all the command-line commands.</li>
+<li><code>models</code>: Contains all struct models for database, data binding/validation forms, configuration files.</li>
+<li><code>modules</code>: Contains sub-packages for different modules of the project, such as...
+<ul>
+<li><code>settings</code>: Which contains program configuration.</li>
+<li><code>utils</code>: A &quot;catch-all&quot; module for everything and anything which doesn't fit anywhere else. :)</li>
+<li>Other package modules can be created here as needed.</li>
+</ul>
+</li>
+<li><code>public</code>: Any files here will be public facing for web, this is useful for hosting web assets such as
+JavaScript files, CSS, images, and fonts.
+<ul>
+<li><code>js</code>: For JavaScript files, external libraries must be versioned. The main JS file should be called <code>main.js</code>.</li>
+<li><code>css</code>: For CSS files, external libraries must be versioned. The main CSS file should be called <code>main.css</code>.</li>
+</ul>
+</li>
+<li><code>routes</code>: Where routes functions live, handling GET and POST requests, templates, validation, rendering pages, etc.</li>
+<li><code>templates</code>: Where all the HTML template files are stored.
+<ul>
+<li><code>base</code>: Where base templates live, such as <code>head</code> and <code>footer</code>.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#liaison-communications-log" id="liaison-communications-log">Liaison communications log</a></h2>
+<p>The project liaison shall keep a log of all the communications with
+the professors and the project manager. preferably on the wiki.</p>
+<h2><a class="header" href="#code-of-conduct" id="code-of-conduct">Code of Conduct</a></h2>
+<p>We shall follow <a href="http://lunduke.com/coc.html">The Lunduke Code of Conduct</a>, which
+simply states:</p>
+<blockquote>
+<p>Be Excellent to Each Other.</p>
+</blockquote>
+<p>And that's it! Simple enough, huh?</p>
+<h2><a class="header" href="#revisions-to-this-document" id="revisions-to-this-document">Revisions to this document</a></h2>
+<p>Any changes to this document must be approved by a vote before being enforceable.
+All changes to this document must be logged in the revision log.</p>
+<h2><a class="header" href="#revision-log" id="revision-log">Revision log</a></h2>
+<ul>
+<li>rev0 <em>(1st October 2019)</em>
+<ul>
+<li>Initial version</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Guide/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Guide/Design-Guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../Guide/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../Guide/Design-Guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Simulator - Nacdlow Wiki</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Nacdlow Internal Wiki</a></li><li class="chapter-item expanded "><a href="../News.html"><strong aria-hidden="true">2.</strong> News</a></li><li class="chapter-item expanded "><a href="../Members.html"><strong aria-hidden="true">3.</strong> Members</a></li><li class="chapter-item expanded "><a href="../Questions-and-Answers.html"><strong aria-hidden="true">4.</strong> Questions and Answers</a></li><li class="chapter-item expanded "><a href="../Accounts.html"><strong aria-hidden="true">5.</strong> Accounts</a></li><li class="chapter-item expanded "><a href="../Golang-Tutorial.html"><strong aria-hidden="true">6.</strong> Golang Tutorial</a></li><li class="chapter-item expanded "><a href="../LaTeX-Docs.html"><strong aria-hidden="true">7.</strong> LaTeX Documentation</a></li><li class="chapter-item expanded "><a href="../Technical/index.html"><strong aria-hidden="true">8.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Technical/Profiling.html"><strong aria-hidden="true">8.1.</strong> Profiling iglü server</a></li></ol></li><li class="chapter-item expanded "><a href="../Guide/index.html"><strong aria-hidden="true">9.</strong> Style Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Guide/Main-Style-Guide.html"><strong aria-hidden="true">9.1.</strong> Main Style Guide</a></li><li class="chapter-item expanded "><a href="../Guide/Design-Guide.html"><strong aria-hidden="true">9.2.</strong> Design Style Guide</a></li></ol></li><li class="chapter-item expanded "><a href="../Brainstorming/index.html"><strong aria-hidden="true">10.</strong> Brainstorming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Brainstorming/Simulator.html" class="active"><strong aria-hidden="true">10.1.</strong> Simulator</a></li></ol></li><li class="chapter-item expanded "><a href="../Meetings/Recordings.html"><strong aria-hidden="true">11.</strong> Meeting Recordings</a></li><li class="chapter-item expanded "><a href="../Meetings/index.html"><strong aria-hidden="true">12.</strong> Meetings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Meetings/1.-27th-September.html"><strong aria-hidden="true">12.1.</strong> 27th of September</a></li><li class="chapter-item expanded "><a href="../Meetings/2.-1st-October.html"><strong aria-hidden="true">12.2.</strong> 1st of October</a></li><li class="chapter-item expanded "><a href="../Meetings/3.-8th-October.html"><strong aria-hidden="true">12.3.</strong> 8th of October</a></li><li class="chapter-item expanded "><a href="../Meetings/4.-11th-October.html"><strong aria-hidden="true">12.4.</strong> 11th of October</a></li><li class="chapter-item expanded "><a href="../Meetings/5.-16th-October.html"><strong aria-hidden="true">12.5.</strong> 16th of October</a></li><li class="chapter-item expanded "><a href="../Meetings/6.-22th-October.html"><strong aria-hidden="true">12.6.</strong> 22nd of October</a></li><li class="chapter-item expanded "><a href="../Meetings/7.-05th-November.html"><strong aria-hidden="true">12.7.</strong> 5th of November</a></li><li class="chapter-item expanded "><a href="../Meetings/9.-15th-January.html"><strong aria-hidden="true">12.8.</strong> 15th of January</a></li><li class="chapter-item expanded "><a href="../Meetings/17-02-20.html"><strong aria-hidden="true">12.9.</strong> 17th of February</a></li><li class="chapter-item expanded "><a href="../Meetings/21-02-20.html"><strong aria-hidden="true">12.10.</strong> 21st of February</a></li><li class="chapter-item expanded "><a href="../Meetings/03-03-20.html"><strong aria-hidden="true">12.11.</strong> 3rd of March</a></li></ol></li><li class="chapter-item expanded "><a href="../Ideas/index.html"><strong aria-hidden="true">13.</strong> Ideas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Ideas/Alakbar's-Ideas.html"><strong aria-hidden="true">13.1.</strong> Alakbar's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Amaan's-Ideas.html"><strong aria-hidden="true">13.2.</strong> Amaan's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Humaid's-Ideas.html"><strong aria-hidden="true">13.3.</strong> Humaid's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Numan's-Ideas.html"><strong aria-hidden="true">13.4.</strong> Numan's Ideas</a></li><li class="chapter-item expanded "><a href="../Ideas/Ruaridh's-Ideas.html"><strong aria-hidden="true">13.5.</strong> Ruaridh's Ideas</a></li></ol></li><li class="chapter-item expanded "><a href="../Research-and-Analysis/index.html"><strong aria-hidden="true">14.</strong> Research and Analysis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Research-and-Analysis/Existing-Solutions.html"><strong aria-hidden="true">14.1.</strong> Existing Solutions</a></li><li class="chapter-item expanded "><a href="../Research-and-Analysis/Energy-Research.html"><strong aria-hidden="true">14.2.</strong> Energy Research</a></li></ol></li><li class="chapter-item expanded "><a href="../Manager/index.html"><strong aria-hidden="true">15.</strong> Manager</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Manager/Emails.html"><strong aria-hidden="true">15.1.</strong> Emails</a></li><li class="chapter-item expanded "><a href="../Manager/Meetings.html"><strong aria-hidden="true">15.2.</strong> Meetings</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Nacdlow Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#simulator-logic" id="simulator-logic">Simulator logic</a></h2>
+<h3><a class="header" href="#time-simulation" id="time-simulation">Time simulation</a></h3>
+<p>The simulated environment will start at the current time, running normal time.
+In the simulator app, we will be able to speed up, change, or stop the time.
+This will reflect Darksky's real data. The simulated home will also have a
+location, which is used for getting the weather data.</p>
+<h3><a class="header" href="#weather-simulation" id="weather-simulation">Weather simulation</a></h3>
+<p>Weather will get pulled from Darksky, which will also return an hourly
+forecast of the weather. This can be used in both simulating the weather, and
+also for the smart home app and its suggestions.</p>
+<p>Darksky provides weather/natural disaster alerts, this data can be used. In the
+simulator page, you should be able to override the Darksky temperatures and
+values, and simulate alerts.</p>
+<h3><a class="header" href="#temperatures" id="temperatures">Temperatures</a></h3>
+<p>If a door or window is opened, the room's temperature will slowly start to
+match the outside temperature.</p>
+<p>Also, this applies to temperature control. When the temperature control is
+running, it will slowly adjust the room temperature to the set temperature.</p>
+<p>The temperature control is also able to &quot;fight&quot; with the outside weather if
+both windows/main door and temp control is running.</p>
+<p>If both temperature control (heating/cooling) and windows/doors are closed,
+then the room temperatures will very slowly change towards the outside
+temperature. Also opening the windows for a minute or two can significantly
+drop the temperature of the rooms.</p>
+<h3><a class="header" href="#power-generation" id="power-generation">Power generation</a></h3>
+<p>Depending on the cloud coverage (pulled from the weather data), the power
+generation will vary (under the max solar power generation capacity, in the
+simulated home).</p>
+<h3><a class="header" href="#power-consumption" id="power-consumption">Power consumption</a></h3>
+<p>Depending on the devices running on the home, the power consumption will
+change. There will also be a &quot;baseline&quot; power consumption, which will count in
+fridges and other appliances. This baseline power consumption will vary
+depending on the time of day, based on an average home power consumption graph.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Brainstorming/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Meetings/Recordings.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../Brainstorming/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../Meetings/Recordings.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
